@@ -1,0 +1,368 @@
+/*
+- Anon -
+Custom CSS for 4chan
+- PC and Android -
+*/
+
+
+
+/*
+si quiere activar los efectos descomente el css, elimine esto "/ * * /"
+*/
+
+/*botones*/
+.UIPanel button:hover{
+    transform: scale(1.04,1.04);
+    cursor:pointer;
+}
+/*caja de configuraciones y mas*/
+
+div .extPanel{
+    padding:15px;
+    box-shadow:0 0 30px rgba(0, 0, 0, 0.603);
+    background: rgb(13, 13, 14);
+    color: #fdfdfdcc;
+    border:none;
+}
+
+.UIPanel button{
+    background: #fff;
+    padding:8px 15px 8px 15px;
+    margin-top:20px;
+    transition: transform 0.4s;
+}
+
+.UIPanel > div{
+    width:600px;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius:10px;
+    margin:0;
+    position: fixed;
+    width:80%;
+}
+
+#settingsMenu label input{
+    margin:12px 10px 12px 10px;
+}
+
+.settings-tip{
+    padding-left:40px;
+    color: rgb(134, 134, 134);
+}
+
+a{
+    padding:8px;
+    color: #a0a0a0 !important;
+}
+
+.quoteLink, .quotelink, .deadlink{
+    color: #fdcbb7 !important;
+}
+
+.extButton, img.pointer{
+    padding:6px;
+}
+
+#settings-exp-all{
+    margin-top:10px;
+}
+
+.UIPanel .center{
+    margin-bottom:20px;
+}
+
+/*navegacion*/
+
+div#boardNavDesktop a{
+    padding-left:10px;
+    padding-right:10px;
+    color:#c5c5c5;
+}
+
+div#boardNavDesktop a:hover{
+    color: #7ea5f8 !important;
+    background: rgba(43, 43, 53, 0.555);
+}
+
+.navtopright{
+    font-size:12px;
+}
+
+#boardNavDesktopFoot .boardList a{
+    padding-left:10px;
+    padding-right:10px;
+    color:#c5c5c5;
+}
+
+.boardList{
+    color: #474b55;
+}
+
+.absBotDisclaimer{
+    color:#c5c5c5;
+}
+
+/*cuerpo y estilos generales*/
+
+.nameBlock.capcodeMod{
+    text-shadow: 0 0 25px rgba(236, 71, 236, 0.486);
+}
+
+.name.capcode{
+    color:#ec47ec !important;
+}
+
+.nameBlock.capcodeMod span.name, span.capcodeMod a span.name, span.capcodeMod span.postertrip, span.capcodeMod strong.capcode{
+    color:#ec47ec !important;
+}
+
+.identityIcon{
+    transform: scale(1.08,1.08);
+}
+
+.fileText a{
+    color: #fdd0d0;
+}
+
+#bannerCnt{
+    border:none;
+}
+
+.boardTitle{
+    color:#5d7fdb !important;
+}
+
+.UIPanel{
+    background: rgba(0, 0, 0, 0.65);
+}
+
+body{
+    background: rgb(7, 7, 10);
+    color: #fff;
+}
+
+.postNum .desktop{
+    color:#cedfff;
+}
+
+div.post div.postInfo span.subject{
+    color: #7ea5f8;
+}
+
+div.post div.postInfo span.nameBlock span.name{
+    color: aquamarine;
+}
+
+div.post div.postInfo span.postNum a:hover, .posteruid .hand{
+    color: #b9b9b9;
+    transition:background 0.4s;
+}
+
+div.post div.postInfo span.postNum a, .posteruid .hand{
+    color: #cdd9ff;
+}
+
+div.post div.postInfo span.postNum a:hover, .posteruid .hand:hover{
+    color:#5d7fdb !important;
+    background: rgba(43, 43, 53, 0.555);
+}
+
+a:hover{
+    transition:color 0.4s;
+    color:#5d7fdb !important;
+}
+
+.globalMessage.hideMobile{
+    color:#5d7fdb;
+}
+
+.pagelist.desktop{
+    background: rgb(24, 24, 26);
+    border: none !important;
+    transition: background 0.5s,color 0.5s;
+}
+
+div.pagelist div.pages a{
+    padding-left:12px;
+    padding-right:12px;
+    transition: background 0.5s,color 0.5s;
+}
+
+div.pagelist div.pages a:hover{
+    background: rgb(45, 45, 49);
+    color:white;
+}
+
+/*post*/
+.post.reply{
+    background: rgb(20, 20, 24);
+    border:none;
+    padding:5px;
+    transition:border-radius 0.5s, transform 0.5s, box-shadow 0.5s;
+}
+
+div.post{
+    margin:2px 20px;
+}
+
+.burichan_new .backlink a, .yotsuba_b_new .backlink a{
+    color:#F0B1F9 !important;
+}
+
+.reply:target, .reply.highlight{
+    border:none !important;
+    background: rgb(58, 58, 73) !important;
+    box-shadow: 0 0 15px rgba(87, 87, 105, 0.596) !important;
+    border-radius:5px;
+    max-width:85%;
+    transform:translateX(5%) scale(1.09,1.09);
+}
+
+@media only screen and (max-width: 500px) {
+    .reply.highlight{
+        width:100%;
+        transform:none;
+    }
+}
+
+/*submenu post*/
+
+.dd-menu ul{
+    background-color: rgb(31, 31, 39);
+    border:none;
+}
+
+.dd-menu li{
+    padding:8px 10px 8px 10px;
+    border:none;
+    transition: background 0.6s;
+}
+
+.dd-menu li:hover{
+    background-color: rgb(49, 49, 63);
+}
+
+/*new post*/
+
+table.postForm > tbody > tr > td:first-child{
+    color: white;
+    background-color:#375eca;
+}
+
+/*post op preview*/
+.preview.reveal-spoilers{
+    border:none !important;
+    background: rgb(58, 58, 73) !important;
+    box-shadow: 0 0 15px rgba(87, 87, 105, 0.596) !important;
+    border-radius:5px;
+    padding:10px;
+}
+
+/*movil*/
+
+@media only screen and (max-width:600px){
+    #settingsMenu > div{
+        left:50%;
+        width:100%;
+    }
+
+}
+
+@media only screen and (max-width:480px){
+    div.post div.postInfoM span.nameBlock span.name,
+    div.postInfo span.nameBlock span.name {
+        color:#2acf7a;
+        font-weight:700;
+    }
+
+    div.post div.postInfoM{
+        background-color: #29292e;
+    }
+    
+    div.post div.postInfoM span.dateTime {
+        float:right;
+        text-align:right;
+        color: white !important;
+    }
+
+    div#boardNavMobile{
+        background-color: #2d2d33;
+        color:white !important;
+        border: none;
+    }
+
+    .is_index div.opContainer{
+        background-color: #1c1c22;
+        border:none !important;
+    }
+
+    .postInfoM.mobile{
+        border:none !important;
+    }
+
+    div.post div.postInfoM span.postNum a, div.postInfo span.postNum a{
+        color:#888888 !important;
+    }
+    div.post div.postInfoM span.postNum a, div.postInfo span.postNum a:hover{
+        color:#5d7fdb !important
+    }
+    .nameBlock.capcodeMod{
+       text-shadow: 0 0 25px rgba(236, 71, 236, 0.562); 
+    }
+    div.post div.postInfoM span.subject{
+        color:#aaa8f5;
+    }
+    div.post{
+        margin:3px 0;
+    }
+    .postLink.mobile{
+        background-color: #29292e;
+        border:none;
+    }
+    .pageJump a{
+        padding:10px;
+    }
+
+    .button a:hover, a.button{
+        color:white !important;
+        border: none;
+        background-image: none;
+    }
+
+    .button a:hover, a.button:hover{
+        color:white !important;
+    }
+
+    .button{
+        background-color: #3d3942;
+        border: none;
+        background-image: none;
+        transition:background 0.5s;
+    }
+
+    .button:hover{
+        background-color: #4e4955;
+    }
+
+    .backlink.mobile{
+        background-color: #232744 !important;
+        box-shadow: 0 0 8px rgba(135, 147, 252, 0.226);
+        border:none;
+    }
+    div.postLink span.info{
+        color:#7a7ac7;
+    }
+    .backlink span:hover{
+        color: #7ea5f8 !important;
+    }
+    a:hover, .useremail .name:hover, .useremail .postertrip:hover, a.quoteLink:hover, a.quotelink:hover, a.deadlink:hover, .useremail :hover, .useremail:hover *{
+        color: #7ea5f8 !important;
+    }
+    .burichan_new .backlink a, .yotsuba_b_new .backlink a{
+        color: #7ea5f8 !important;
+    }
+    div.postLink a{
+        color: white !important;
+    }
+}
