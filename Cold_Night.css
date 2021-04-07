@@ -4,12 +4,6 @@ Custom CSS for 4chan
 - PC and Android -
 */
 
-
-
-/*
-si quiere activar los efectos descomente el css, elimine esto "/ * * /"
-*/
-
 /*botones*/
 .UIPanel button:hover{
     transform: scale(1.04,1.04);
