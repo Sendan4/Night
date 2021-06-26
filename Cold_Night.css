@@ -167,7 +167,9 @@ span#navbotright{
 /* Fuente para el texto, y otras cosas */
 body{
     text-rendering: optimizeLegibility;
-}
+    background: rgb(6, 6, 6);
+    color: #fff;
+} 
 
 .nameBlock.capcodeMod{
     text-shadow: 0 0 25px rgba(236, 71, 236, 0.486);
@@ -199,11 +201,6 @@ body{
 
 .UIPanel{
     background: rgba(0, 0, 0, 0.65);
-}
-
-body{
-    background: rgb(7, 7, 10);
-    color: #fff;
 }
 
 .postNum .desktop{
