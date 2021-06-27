@@ -4,6 +4,8 @@ Tema Oscuro para la pagina 4chan
 
 ## Como Agregar Este tema a 4chan?
 
+Primeramente Obtenga los estilos [aqui](https://github.com/448L/Night/releases)
+
 Acceda a [4chan](https://www.4chan.org/) y vaya a un tablon, arriba busque "settings".
 
 ![alt text](https://github.com/Sen448/Night/blob/main/capturas/1.png)
