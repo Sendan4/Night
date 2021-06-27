@@ -25,6 +25,7 @@ Custom CSS for 4chan
     --button-text:white;
     --name-anon-color:aquamarine;
     --board-title-color:rgb(93, 127, 219);
+    --text-no-important:rgba(77, 80, 90, 0.534);
 }
 
 /*botones*/
@@ -171,13 +172,30 @@ div#boardNavDesktopFoot{
     background: var(--bg-boardNav);
 }
 
+.navLinks.navLinksBot.desktop{
+    margin:50px 0 0 0;
+    color:var(--text-no-important);
+}
+
+.open-qr-link{
+    padding:5px;
+    position: absolute;
+    width:150px;
+    top:-40px;
+    left:0;
+}
+
+.navLinks.navLinksBot.desktop label input{
+    color: var(--button-text);
+}
+
 .bottomCtrl{
     margin:10px 0 20px 0;
 }
 
 .navbotright{
     margin:10px 0 10px 0;
-    background: rgb(30, 30, 34);
+    background: var(--text-no-important);
 }
 
 
@@ -189,7 +207,7 @@ span#navbotright{
 }
 
 .boardList{
-    color: rgba(77, 80, 90, 0.534);
+    color: var(--text-no-important);
 }
 
 .absBotDisclaimer{
