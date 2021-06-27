@@ -7,11 +7,24 @@ Custom CSS for 4chan
 /*variables, para organizar esto*/
 :root{
     --bg:rgb(6, 6, 6);
-    --bg-reply-post:rgb(58, 58, 73) !important;
-    --bg-reply-post-Tex-Shadow:0 0 15px rgba(32, 32, 39, 0.425) !important;
+    --bg-reply-post:rgb(58, 58, 73);
+    --bg-reply-post-Tex-Shadow:0 0 15px rgba(32, 32, 39, 0.63);
     --bg-button:rgb(31, 31, 32);
     --bg-button-hover:rgb(49, 49, 49);
-    --link-reply-post:#fdcbb7 !important;
+    --link-reply-post:#fdcbb7;
+    --bg-allpage-blur-no-hover:blur(7px);
+    --bg-back-UIPanel: rgba(0, 0, 0, 0.925);
+    --extPanel-box-shadow:0 0 70px rgba(62, 62, 62, 0.24);
+    --bg-extPanel:rgb(13, 13, 14);
+    --a-color-hover:rgb(93, 127, 219);
+    --a-color:rgb(189, 189, 189);
+    --settings-tip-color:rgb(134, 134, 134);
+    --bg-boardNav:rgb(30, 30, 34);
+    --bg-boardNav-a:rgb(197, 197, 197);
+    --a-color-hover:rgb(126, 165, 248);
+    --button-text:white;
+    --name-anon-color:aquamarine;
+    --board-title-color:rgb(93, 127, 219);
 }
 
 /*botones*/
@@ -24,9 +37,9 @@ Custom CSS for 4chan
 
 div .extPanel{
     padding:15px;
-    box-shadow:0 0 30px rgba(0, 0, 0, 0.603);
-    background: rgb(13, 13, 14);
-    color: #fdfdfdcc;
+    box-shadow:var(--extPanel-box-shadow);
+    background: var(--bg-extPanel);
+    color: white;
     border:none;
 }
 
@@ -45,6 +58,10 @@ div .extPanel{
     max-height: 95%;
 }
 
+.UIPanel{
+    background: var(--bg-back-UIPanel)
+}
+
 .UIPanel > div{
     width:600px;
     left:50%;
@@ -60,20 +77,20 @@ div .extPanel{
 }
 
 .settings-tip{
-    padding-left:40px;
-    color: rgb(134, 134, 134);
+    padding:4px 0px 4px 35px;
+    color: var(--settings-tip-color);
 }
 
 a{
     padding:8px;
-    color: rgb(189, 189, 189) !important;
+    color: var(--a-color) !important;
     text-decoration-line: none !important;
 }
 
 
 a:hover{
     transition:color 0.4s;
-    color:#5d7fdb !important;
+    color: var(--a-color-hover) !important;
     
 }
 
@@ -86,7 +103,7 @@ a:hover{
 }
 
 .quoteLink, .quotelink, .deadlink{
-    color: var(--link-reply-post);
+    color: var(--link-reply-post) !important;
 }
 
 .extButton, img.pointer{
@@ -101,23 +118,35 @@ a:hover{
     margin-bottom:20px;
 }
 
+.settings-cat-lbl img{
+    width:18px;
+    height:18px;
+    margin-right:10px;
+}
+#settingsMenu label{
+    font-size:13px;
+    padding:none;
+}
+
+.settings-expand.pointer{
+    font-size:15px;
+}
 /*navegacion*/
 
 div#boardNavDesktop a{
     padding-left:10px;
     padding-right:10px;
-    color:#c5c5c5;
+    color:var(--bg-boardNav-a);
 }
 
 div#boardNavDesktop a:hover{
-    color: #7ea5f8 !important;
-    background: rgba(43, 43, 53, 0.555);
+    color: var(--a-color-hover) !important;
 }
 
 #boardNavDesktop{
-    padding: 10px 5px 30px 5px;
+    padding: 10px 5px 40px 5px;
     margin: 0;
-    background: rgb(30, 30, 34);
+    background: var(--bg-boardNav);
 }
 
 #navtopright{
@@ -134,12 +163,12 @@ div#boardNavDesktop a:hover{
 #boardNavDesktopFoot .boardList a{
     padding-left:10px;
     padding-right:10px;
-    color:#c5c5c5;
+    color:var(--bg-boardNav-a);
 }
 
-#boardNavDesktopFoot{
-    margin: 5px 0;
-    background: rgb(30, 30, 34);
+div#boardNavDesktopFoot{
+    padding: 10px 10px 30px 10px;
+    background: var(--bg-boardNav);
 }
 
 .bottomCtrl{
@@ -151,10 +180,6 @@ div#boardNavDesktop a:hover{
     background: rgb(30, 30, 34);
 }
 
-div#boardNavDesktopFoot a{
-    margin:2px 4px 2px 4px;
-    background: rgb(30, 30, 34);
-}
 
 span#navbotright{
     margin: 10px 0;
@@ -164,7 +189,7 @@ span#navbotright{
 }
 
 .boardList{
-    color: #474b55;
+    color: rgba(77, 80, 90, 0.534);
 }
 
 .absBotDisclaimer{
@@ -178,8 +203,22 @@ body{
     text-rendering: optimizeLegibility;
     background: var(--bg);
     color: #fff;
-    font-family: Fira Code, -apple-system, Roboto, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+    /*Fira Code, Beautiful Font!! >:)*/
+    font-family: Fira Code, -apple-system, Roboto, Ubuntu, Cantarell, 'Open Sans', sans-serif; 
 }
+
+/* Desactivado por Defecto, Podria molestar en un movil, activalo descomentando todo lo que encierra a html --> /* */
+/*
+html{
+    filter:var(--bg-allpage-blur-no-hover);
+    transition-delay: 1s, 250ms;
+    transition: filter 0.4s;
+}
+
+html:hover{
+    filter: none;
+}
+*/
 
 .nameBlock.capcodeMod{
     text-shadow: 0 0 25px rgba(236, 71, 236, 0.486);
@@ -206,11 +245,7 @@ body{
 }
 
 .boardTitle{
-    color:#5d7fdb !important;
-}
-
-.UIPanel{
-    background: rgba(0, 0, 0, 0.65);
+    color: var(--board-title-color) !important;
 }
 
 .postNum .desktop{
@@ -218,11 +253,11 @@ body{
 }
 
 div.post div.postInfo span.subject{
-    color: #7ea5f8;
+    color: var(--a-color-hover);
 }
 
 div.post div.postInfo span.nameBlock span.name{
-    color: aquamarine;
+    color: var(--name-anon-color);
 }
 
 div.post div.postInfo span.postNum a:hover, .posteruid .hand{
@@ -283,7 +318,7 @@ div.post{
 
 .reply:target, .reply.highlight{
     border:none !important;
-    background: var(--bg-reply-post);
+    background: var(--bg-reply-post) !important;
     box-shadow: 0 0 15px rgba(87, 87, 105, 0.596) !important;
     border-radius:5px;
     transform: scale(1.05,1.05);
@@ -337,16 +372,16 @@ table.postForm > tbody > tr > td:first-child{
 /*post op preview*/
 .preview.reveal-spoilers{
     border:none !important;
-    background: var(--bg-reply-post);
-    box-shadow: var(--bg-reply-post-Tex-Shadow);
+    background: var(--bg-reply-post) !important;
+    box-shadow: var(--bg-reply-post-Tex-Shadow) !important;
     border-radius:5px;
     padding:10px;
 }
 /*Copy and paste hehehe*/
 .post.reply.preview{
     border:none !important;
-    background: var(--bg-reply-post);
-    box-shadow: var(--bg-reply-post-Tex-Shadow);
+    background: var(--bg-reply-post) !important;
+    box-shadow: var(--bg-reply-post-Tex-Shadow) !important;
     border-radius:5px;
     padding:10px;
 }
@@ -363,7 +398,7 @@ table.postForm > tbody > tr > td:first-child{
 @media only screen and (max-width:480px){
     div.post div.postInfoM span.nameBlock span.name,
     div.postInfo span.nameBlock span.name {
-        color:#2acf7a;
+        color:var(--name-anon-color);
         font-weight:700;
     }
 
@@ -377,6 +412,10 @@ table.postForm > tbody > tr > td:first-child{
         color: white !important;
     }
 
+    .reply:target, .reply.highlight{
+        transform: none;
+    }
+
     div#boardNavMobile{
         background-color: #2d2d33;
         color:white !important;
@@ -387,6 +426,11 @@ table.postForm > tbody > tr > td:first-child{
     .is_index div.opContainer{
         background-color: #1c1c22;
         border:none !important;
+    }
+
+    div.opContainer{
+        background: none;
+        border:none;
     }
 
     .postInfoM.mobile{
@@ -413,31 +457,32 @@ table.postForm > tbody > tr > td:first-child{
         border:none;
     }
     .pageJump a{
-        padding:10px;
+        padding:2px;
         padding-top: 15px;
         padding-bottom: 15px;
-        font-size: 12px !important;
+        font-size: 11.5px !important;
     }
 
     .button a:hover, a.button{
-        color:white !important;
+        color:var(--button-text) !important;
         border: none;
         background-image: none;
     }
 
     .button a:hover, a.button:hover{
-        color:white !important;
+        color:var(--button-text) !important;
     }
 
     .button{
-        background-color: #3d3942;
+        background-color: var(--bg-button);
         border: none;
         background-image: none;
         transition:background 0.5s;
+        color:var(--button-text) !important;
     }
 
     .button:hover{
-        background-color: #4e4955;
+        background-color: var(--bg-button-hover);
     }
 
     .backlink.mobile{
@@ -449,15 +494,23 @@ table.postForm > tbody > tr > td:first-child{
         color:#7a7ac7;
     }
     .backlink span:hover{
-        color: #7ea5f8 !important;
+        color: var(--a-color-hover) !important;
     }
     a:hover, .useremail .name:hover, .useremail .postertrip:hover, a.quoteLink:hover, a.quotelink:hover, a.deadlink:hover, .useremail :hover, .useremail:hover *{
-        color: #7ea5f8 !important;
+        color: var(--a-color-hover) !important;
     }
     .burichan_new .backlink a, .yotsuba_b_new .backlink a{
-        color: #7ea5f8 !important;
+        color: var(--a-color-hover) !important;
     }
     div.postLink a{
         color: white !important;
     }
 }
+
+
+/*
+Hilos en modo catalogo.
+Tambien aplica para la pagina de inicio de seleccion en modo catalogo.
+El modo frame, no funciona, no lo uses. :(
+*/
+
