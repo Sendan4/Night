@@ -28,6 +28,8 @@ Custom CSS for 4chan
     --text-no-important:rgba(77, 80, 90, 0.534);
     --text:white;
     --bg-thread:rgb(49, 49, 53);
+    --img-a-color:rgb(255, 218, 209);
+    --img-a-color-hover:rgb(255, 153, 128);
 }
 
 /*botones*/
@@ -277,9 +279,18 @@ html:hover{
 .identityIcon{
     transform: scale(1.08,1.08);
 }
+.fileText{
+    font-size:12px;
+}
 
 .fileText a{
-    color: #fdd0d0;
+    color: var(--img-a-color) !important;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.fileText a:hover{
+    color: var(--img-a-color-hover) !important;
 }
 
 #bannerCnt{
@@ -354,6 +365,21 @@ div.post{
     margin:2px 20px;
 }
 
+/*
+cuando la anchura es reducida, originalmente la informacion del archivo se sale del canvas
+*/
+
+@media only screen and (max-width: 670px) {
+    .fileText{
+        display: grid;
+    }
+    
+    .fileText a{
+        padding: 0 7px;
+        width: max-content;
+    }
+}
+
 .burichan_new .backlink a, .yotsuba_b_new .backlink a{
     color:#F0B1F9 !important;
 }
@@ -382,8 +408,9 @@ div.post{
 
 @media only screen and (max-width: 500px) {
     .reply.highlight{
-        width:100%;
+        /*width:100%;*/
         transform:none;
+        border-radius:0;
     }
 }
 
