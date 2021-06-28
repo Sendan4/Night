@@ -26,6 +26,8 @@ Custom CSS for 4chan
     --name-anon-color:aquamarine;
     --board-title-color:rgb(93, 127, 219);
     --text-no-important:rgba(77, 80, 90, 0.534);
+    --text:white;
+    --bg-thread:rgb(49, 49, 53);
 }
 
 /*botones*/
@@ -168,21 +170,34 @@ div#boardNavDesktop a:hover{
 }
 
 div#boardNavDesktopFoot{
-    padding: 10px 10px 30px 10px;
+    padding: 10px 10px 40px 10px;
     background: var(--bg-boardNav);
 }
 
 .navLinks.navLinksBot.desktop{
-    margin:50px 0 0 0;
+    margin:15px 0 0 0;
     color:var(--text-no-important);
 }
 
-.open-qr-link{
+.open-qr-wrap{
     padding:5px;
-    position: absolute;
-    width:150px;
-    top:-40px;
-    left:0;
+    margin:5px 15px;
+    width:110px;
+    height: auto;
+    border-radius: 5px;
+    background: var(--bg-button);
+    color: var(--button-text);
+    transition: transform 0.5s;
+}
+
+.open-qr-wrap:hover{
+    background: var(--bg-button-hover);
+    transform: scale(1.024,1.024);
+}
+
+.navLinks.desktop{
+    margin:5px 0;
+    color:var(--text-no-important);
 }
 
 .navLinks.navLinksBot.desktop label input{
@@ -434,11 +449,16 @@ table.postForm > tbody > tr > td:first-child{
         transform: none;
     }
 
-    div#boardNavMobile{
-        background-color: #2d2d33;
+    div#boardNavMobile.mobile{
+        background-color: #2d2d33 !important;
+        background: #2d2d33 !important;
         color:white !important;
         border: none;
         padding: 10px 0;
+    }
+
+    div#boardNavMobile.mobile strong{
+        color:var(--text);
     }
 
     .is_index div.opContainer{
@@ -532,3 +552,129 @@ Tambien aplica para la pagina de inicio de seleccion en modo catalogo.
 El modo frame, no funciona, no lo uses. :(
 */
 
+div#info{
+    margin:5px 0;
+    color:var(--text-no-important);
+}
+
+.navLinks.mobilebtn span a{
+    color:var(--text);
+}
+
+.navLinks.navLinksBottom.mobilebtn{
+    margin:10px 0;
+    color:var(--text-no-important);
+}
+
+.navLinks.navLinksBottom.mobilebtn span a{
+    color:var(--text);
+}
+
+/*Lo mismo que UIpanel y extPanel, solo que con nombre diferente*/
+.panel{
+    border-radius:10px;
+    padding:15px;
+    box-shadow:var(--extPanel-box-shadow);
+    background: var(--bg-extPanel);
+    color: white;
+    border:none;
+}
+#backdrop{
+    background: var(--bg-back-UIPanel);
+}
+
+/*boton del el panel*/
+#theme-save{
+    background: #fff;
+    padding:8px 15px 8px 15px;
+    margin-top:20px;
+    transition: transform 0.4s, background 0.4s;
+    background: var(--bg-button);
+    border-radius: 5px;
+    border:none;
+    color:white;
+}
+#theme-save:hover{
+    transform: scale(1.06,1.06);
+    cursor:pointer;
+    background: var(--bg-button-hover);
+}
+
+ul.clickset.desktop li kbd{
+    color:black;
+}
+
+/* Los Hilos */
+
+#threads div.thread{
+    transition: background 0.5s, transform 0.5s, padding 0.5s;
+    font-size: 12px;
+}
+
+#threads div.thread:hover{
+    background:var(--bg-thread);
+    transform: scale(1.09,1.09);
+    /*border-radius: 10px;*/
+}
+
+div.thread img{
+    cursor: pointer;
+}
+div.thread a.postMenuBtn{
+    display: none;
+    position: relative;
+    font-size: 15px;
+}
+
+.meta{
+    padding-top:3px;
+    padding-bottom:5px;
+}
+
+.teaser:hover{
+    padding:0px 6px 0px 6px;
+    height: max-content;
+}
+
+/* botones */
+
+.btn-wrap{
+    padding:8px 15px 8px 15px;
+    margin-top:20px;
+    transition: transform 0.4s, background 0.4s;
+    background: var(--bg-button);
+    color: var(--text-no-important);
+    border-radius: 5px !important;
+    border:unset !important;
+    background-image:unset !important;
+    background-color:unset !important;
+    position: inherit;
+}
+
+.button{
+    border-radius: 5px !important;
+    background: var(--bg-button);
+    border:unset !important;
+    padding:8px 15px 8px 15px;
+    color: var(--button-text) !important;
+}
+
+#settings{
+    display: inherit;
+    margin:5px 0;
+}
+
+span.navLinks.mobilebtn{
+    display: inherit;
+    margin:5px 0;
+}
+
+/* mejor no les doy estilos */
+#filters-ctrl{
+    display: inline-block;
+    margin:5px 0;
+}
+#qf-ctrl{
+    display: inline-block;
+    margin:5px 0;
+}
