@@ -238,7 +238,16 @@ body{
     background: var(--bg);
     color: #fff;
     /*Fira Code, Beautiful Font!! >:)*/
-    font-family: Fira Code, -apple-system, Roboto, Ubuntu, Cantarell, 'Open Sans', sans-serif; 
+    font-family: 
+
+    Fira Code, 
+    -apple-system, 
+    Roboto, 
+    Ubuntu, 
+    Cantarell, 
+    Noto Sans,
+    'Open Sans', 
+    sans-serif; 
 }
 
 /* Desactivado por Defecto, Podria molestar en un movil, activalo descomentando todo lo que encierra a html --> /* */
@@ -579,6 +588,7 @@ div#info{
     background: var(--bg-extPanel);
     color: white;
     border:none;
+    position: fixed;
 }
 #backdrop{
     background: var(--bg-back-UIPanel);
