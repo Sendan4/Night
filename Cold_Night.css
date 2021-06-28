@@ -188,6 +188,7 @@ div#boardNavDesktopFoot{
     background: var(--bg-button);
     color: var(--button-text);
     transition: transform 0.5s;
+    position: inherit;
 }
 
 .open-qr-wrap:hover{
