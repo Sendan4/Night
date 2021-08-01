@@ -2,7 +2,7 @@
 - Disfrutalo Anon -
 - Enjoy Anon -
 Custom CSS for 4chan
-- PC and Android -
+- PC and Movil -
 */
 
 /*variables, para organizar esto*/
@@ -34,7 +34,7 @@ Custom CSS for 4chan
     --img-a-color-hover:rgb(255, 153, 128);
     --bg-PostInfoMobile-reply-post:rgb(43, 43, 60);
     --green-text:rgb(75, 229, 87);
-    --post-preview-box-shadow:0 0 50px rgb(10, 10, 10);
+    --post-preview-box-shadow:0 10px 20px rgb(10, 10, 10);
 }
 
 /*botones*/
@@ -406,17 +406,30 @@ div.postContainer.opContainer {
         box-shadow: var(--post-preview-box-shadow) !important;
     }
     /* Omg las imagenes grandes */
-    div#quote-preview img {
+    div#quote-preview.post.op.preview.reveal-spoilers .fileThumb {
+        width: 30% !important;
+        margin: 6px;
+        display: block;
+        outline: 1px solid red;
+    }
+    div#quote-preview.post.op.preview.reveal-spoilers img {
         height: auto !important;
-        width: 50% !important;
-        padding: 0 3px;
+        width: 100% !important;
+    }
+    div.post.reply.preview.reveal-spoilers .fileThumb
+    div.post.reply.preview.reveal-spoilers img {
+        height: auto !important;
+        max-width: 30% !important;
+        margin: 6px;
+        outline: 1px solid red;
     }
     /* el texto tiene que ocupar el espacio */
     div#quote-preview .postMessage {
-        width: 100%;
+        margin-right:50px;
         margin: 0;
         outline: 1px solid red;
         text-align: left;
+        display:block;
     }
 }
 
