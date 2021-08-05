@@ -1,0 +1,136 @@
+/* 
+Pienso separar los estilos del catalogo de hilos y de los estilos generales
+ya que estos estan separados en la propia pagina
+*/
+
+/*
+Hilos en modo catalogo.
+El modo frame, no funciona, no lo uses. :(
+*/
+
+div#info {
+    margin: 5px 0;
+    color: var(--text-no-important);
+}
+
+.navLinks.mobilebtn span a {
+    color: var(--text);
+}
+
+.navLinks.navLinksBottom.mobilebtn {
+    margin: 10px 0;
+    color: var(--text-no-important);
+}
+
+.navLinks.navLinksBottom.mobilebtn span a {
+    color: var(--text);
+}
+
+/*Lo mismo que UIpanel y extPanel, solo que con nombre diferente*/
+.panel {
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: var(--extPanel-box-shadow);
+    background: var(--bg-extPanel);
+    color: var(--text);
+    border: none;
+    position: fixed;
+}
+#backdrop {
+    background: var(--bg-back-UIPanel);
+}
+
+/*boton del el panel*/
+#theme-save {
+    background: white;
+    padding: 8px 15px 8px 15px;
+    margin-top: 20px;
+    transition: transform 0.4s, background 0.4s;
+    background: var(--bg-button);
+    border-radius: 5px;
+    border: none;
+    color: var(--text);
+}
+#theme-save:hover {
+    transform: scale(1.06, 1.06);
+    cursor: pointer;
+    background: var(--bg-button-hover);
+}
+
+ul.clickset.desktop li kbd {
+    color: black;
+}
+
+/* Los Hilos */
+
+#threads div.thread {
+    transition: background 0.5s, transform 0.5s, padding 0.5s;
+    font-size: 12px;
+}
+
+#threads div.thread:hover {
+    background: var(--bg-thread);
+    transform: scale(1.09, 1.09);
+    /*border-radius: 10px;*/
+}
+
+div.thread img {
+    cursor: pointer;
+}
+div.thread a.postMenuBtn {
+    display: none;
+    position: relative;
+    font-size: 15px;
+}
+
+.meta {
+    padding-top: 3px;
+    padding-bottom: 5px;
+}
+
+.teaser:hover {
+    padding: 0px 6px 0px 6px;
+    height: max-content;
+}
+
+/* botones */
+
+.btn-wrap {
+    padding: 8px 15px 8px 15px;
+    margin-top: 20px;
+    transition: transform 0.4s, background 0.4s;
+    background: var(--bg-button);
+    color: var(--text-no-important);
+    border-radius: 5px !important;
+    border: unset !important;
+    background-image: unset !important;
+    background-color: unset !important;
+    position: inherit;
+}
+
+.button {
+    border-radius: 5px !important;
+    background: var(--bg-button);
+    border: unset !important;
+    padding: 8px 15px 8px 15px;
+    color: var(--button-text) !important;
+}
+
+#settings {
+    display: inherit;
+    margin: 5px 0;
+}
+
+span.navLinks.mobilebtn {
+    display: inherit;
+    margin: 5px 0;
+}
+
+#filters-ctrl {
+    display: inline-block;
+    margin: 5px 0;
+}
+#qf-ctrl {
+    display: inline-block;
+    margin: 5px 0;
+}

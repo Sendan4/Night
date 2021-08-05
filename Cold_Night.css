@@ -14,7 +14,7 @@ Custom CSS for 4chan
     --bg-button-hover: rgb(55, 55, 55);
     --bg-allpage-blur-no-hover: blur(7px);
     --bg-back-UIPanel: rgba(0, 0, 0, 0.8);
-    --bg-extPanel: rgba(13, 13, 14, 0.95);
+    --bg-extPanel: rgba(13, 13, 14, 0.98);
     --bg-boardNav: rgb(30, 30, 34);
     --bg-thread: rgb(49, 49, 53);
     --bg-PostInfoMobile-reply-post: rgb(43, 43, 60);
@@ -22,8 +22,8 @@ Custom CSS for 4chan
     --bg-quick-reply: rgba(13, 13, 14, 0.65);
     --bg-texarea-quick-reply: rgba(255, 255, 255, 0.75);
     /* Box Shadows */
-    --bg-reply-post-Tex-Shadow: 0 0 15px rgba(32, 32, 39, 0.63);
-    --extPanel-box-shadow: 0 0 70px rgba(62, 62, 62, 0.24);
+    --bg-reply-post-Box-Shadow: 0 0 15px rgba(0, 0, 0, 0.63);
+    --extPanel-box-shadow: 0 0 30px rgba(25, 25, 25, 0.24);
     --post-preview-box-shadow: 0 10px 20px rgb(10, 10, 10);
     --bg-quick-reply-box-shadow: 0 0 40px 20px rgb(0, 0, 0, 0.6);
     /* ################################## */
@@ -40,11 +40,16 @@ Custom CSS for 4chan
     --a-visited: rgb(255, 81, 75);
     --a-visited-hover: rgb(39, 233, 255);
     --link-reply-post-visited-hover: rgb(253, 255, 135);
+    --blancklink-color: rgb(117, 90, 255);
+    --blancklink-color-visited: rgb(233, 51, 142);
+    --blancklink-color-hover: rgb(183, 168, 255);
+    --blancklink-color-hover-visited: rgb(255, 179, 215); 
     /* ################################## */
 
     /* Texto ############################ */
     --text-no-important: rgba(77, 80, 90, 0.534);
     --text: white;
+    --text-invisible: rgba(0, 0, 0, 0);
     --mod-text: rgb(236, 71, 236);
     --button-text: white;
     --name-anon-color: aquamarine;
@@ -57,6 +62,8 @@ Custom CSS for 4chan
     --a-text-shadow: 0 0 15px rgba(126, 165, 248);
     --a-file-text-text-shadow: 0 0 10px rgba(255, 190, 160, 0.6);
     --mod-text-shadow: 0 0 25px rgb(255, 59, 255);
+    --blancklink-color-text-shadow: 0 0 15px rgba(117, 90, 255, 0.5);
+    --blancklink-color-hover-visited-text-shadow:0 0 15px rgb(233, 51, 142, 0.6); 
     /* ################################## */
 
     /* Archivo */
@@ -120,11 +127,10 @@ div .extPanel {
 
 a {
     padding:8px;
-    color: var(--a-color);
+    color: var(--a-color) !important;
     text-decoration-line: none !important;
     transition: color 0.4s, text-shadow 0.4s;
 }
-
 
 a:hover {
     color: var(--a-color-hover) !important;
@@ -133,7 +139,7 @@ a:hover {
 }
 
 a:visited {
-    color: var(--a-visited);
+    color: var(--a-visited) !important;
 }
 
 a:visited:hover {
@@ -144,12 +150,25 @@ div.fileText a:hover {
     text-shadow: var(--a-file-text-text-shadow);
 }
 
-.burichan_new .backlink a:hover, .yotsuba_b_new .backlink a:hover {
-    color: #799af5 !important;
-}
-
 .burichan_new .backlink a, .yotsuba_b_new .backlink a {
     text-decoration-line: none;
+    color: var(--blancklink-color) !important;
+    letter-spacing: 1px;
+    font-size: 11.4px;
+    text-rendering: optimizeLegibility;
+}
+.burichan_new .backlink a:hover, .yotsuba_b_new .backlink a:hover {
+    color: var(--blancklink-color-hover) !important;
+    text-shadow: var(--blancklink-color-text-shadow);
+    font-weight: 600;
+}
+.burichan_new .backlink a:visited, .yotsuba_b_new .backlink a:visited {
+    color: var(--blancklink-color-visited) !important;
+}
+.burichan_new .backlink a:visited:hover, .yotsuba_b_new .backlink a:visited:hover {
+    color: var(--blancklink-color-hover-visited) !important;
+    text-shadow: var(--blancklink-color-hover-visited-text-shadow);
+    font-weight: 600;
 }
 
 /* Enlaces de respuesta a otro post ############################################### */
@@ -209,6 +228,14 @@ div#boardNavDesktop a:hover {
     color: var(--a-color-hover) !important;
 }
 
+div#boardNavDesktop a:visited {
+    color: var(--a-visited) !important;
+}
+
+div#boardNavDesktop a:visited:hover {
+    color: var(--a-visited-hover) !important;
+}
+
 #boardNavDesktop {
     padding: 5px 5px 35px 5px;
     margin: 0;
@@ -229,7 +256,21 @@ div#boardNavDesktop a:hover {
 #boardNavDesktopFoot .boardList a {
     padding-left: 10px;
     padding-right: 10px;
-    color: var(--bg-boardNav-a);
+    color: var(--bg-boardNav-a) !important;
+    transition: color 0.5s, text-shadow 0.5s;
+}
+
+#boardNavDesktopFoot .boardList a:hover {
+    color: var(--a-color-hover) !important;
+    text-shadow: var(-a-text-shadow);
+}
+
+#boardNavDesktopFoot .boardList a:visited {
+    color: var(--a-visited) !important;
+}
+
+#boardNavDesktopFoot .boardList a:visited:hover {
+    color: var(--a-visited-hover) !important;
 }
 
 div#boardNavDesktopFoot {
@@ -241,6 +282,16 @@ div#boardNavDesktopFoot {
     margin: 15px 0 0 0;
     color: var(--text-no-important);
 }
+
+.btn-wrap::before {
+    content: "";
+    /* Nada */
+}
+.btn-wrap::after {
+    content: "";
+    /* Nada */
+}
+
 
 .open-qr-wrap {
     padding: 5px;
@@ -390,6 +441,10 @@ div.post div.postInfo span.postNum a:hover, .posteruid .hand:hover {
     color: var(--a-color-hover) !important;
 }
 
+div.post div.postInfo span.postNum a:visited:hover, .posteruid .hand:visited:hover {
+    color: var(--a-visited-hover) !important;
+}
+
 /*el Banner xd*/
 div.boardBanner {
     margin: 40px 0 15px 0 !important;
@@ -494,10 +549,6 @@ div.postContainer.opContainer {
     }
 }
 
-.burichan_new .backlink a, .yotsuba_b_new .backlink a {
-    color:#F0B1F9 !important;
-}
-
 .reply:target, .reply.highlight {
     border:none !important;
     background: var(--bg-reply-post) !important;
@@ -572,7 +623,7 @@ table.postForm textarea {
 .preview.reveal-spoilers {
     border: none !important;
     background: var(--bg-reply-post) !important;
-    box-shadow: var(--bg-reply-post-Tex-Shadow) !important;
+    box-shadow: var(--bg-reply-post-Box-Shadow) !important;
     border-radius: 5px;
     padding: 10px;
 }
@@ -581,7 +632,7 @@ table.postForm textarea {
 .post.reply.preview {
     border: none !important;
     background: var(--bg-reply-post) !important;
-    box-shadow: var(--bg-reply-post-Tex-Shadow) !important;
+    box-shadow: var(--bg-reply-post-Box-Shadow) !important;
     border-radius: 5px;
     padding: 10px;
 }
@@ -739,7 +790,6 @@ div#ctrl-top.desktop hr {
 
 /*
 Hilos en modo catalogo.
-Tambien aplica para la pagina de inicio de seleccion en modo catalogo.
 El modo frame, no funciona, no lo uses. :(
 */
 
@@ -870,6 +920,41 @@ span.navLinks.mobilebtn {
     margin: 5px 0;
 }
 
+/* tabla de filtros */
+#filters button#filters-add {
+    padding: 8px 10px 8px 10px;
+    margin-top: 20px;
+    transition: transform 0.4s, background 0.4s;
+    background: var(--bg-button);
+    border-radius: 5px;
+    color: white;
+    border: 0px;
+}
+#filters button#filters-add:hover {
+    transform: scale(1.06,1.06);
+    cursor: pointer;
+    background: var(--bg-button-hover);
+}
+
+#filters span.right {
+    padding: 8px 10px 8px 10px;
+    margin-top: 20px;
+    transition: transform 0.4s, background 0.4s;
+    background: var(--bg-button);
+    border-radius: 5px;
+    border: none;
+}
+#filters button#filters-save {
+    background: none;
+    border: none;
+    color: white;
+}
+#filters span.right:hover {
+    transform: scale(1.06,1.06);
+    cursor: pointer;
+    background: var(--bg-button-hover);
+}
+
 /* Modo Archivo ###################################################################### */
 
 table#arc-list.flashListing {
@@ -913,6 +998,14 @@ td.postblock {
 }
 #arc-list .quotelink:hover {
     color: var(--a-color-hover) !important;
+    text-shadow: var(--a-text-shadow);
+}
+#arc-list .quotelink:visited {
+    color: var(--a-visited) !important;
+    text-shadow: var(--a-text-shadow);
+}
+#arc-list .quotelink:visited:hover {
+    color: var(--a-visited-hover) !important;
     text-shadow: var(--a-text-shadow);
 }
 /* #################################################################################### */
