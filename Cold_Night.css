@@ -7,50 +7,63 @@ Custom CSS for 4chan
 
 /* variables, para organizar esto!! */
 :root {
+    /* Fondos ########################### */
     --bg: rgb(6, 6, 6);
     --bg-reply-post: rgb(58, 58, 73);
-    --bg-reply-post-Tex-Shadow: 0 0 15px rgba(32, 32, 39, 0.63);
     --bg-button: rgb(31, 31, 32);
     --bg-button-hover: rgb(55, 55, 55);
-    --link-reply-post: #fdcbb7;
-    --link-reply-post-hover: rgb(255, 201, 183);
-    --link-reply-post-text-shadow: 0 0 10px rgba(255, 190, 160, 0.6);
     --bg-allpage-blur-no-hover: blur(7px);
     --bg-back-UIPanel: rgba(0, 0, 0, 0.8);
-    --extPanel-box-shadow: 0 0 70px rgba(62, 62, 62, 0.24);
     --bg-extPanel: rgba(13, 13, 14, 0.95);
+    --bg-boardNav: rgb(30, 30, 34);
+    --bg-thread: rgb(49, 49, 53);
+    --bg-PostInfoMobile-reply-post: rgb(43, 43, 60);
+    --bg-textarea: rgb(30,30,32);
+    --bg-quick-reply: rgba(13, 13, 14, 0.65);
+    --bg-texarea-quick-reply: rgba(255, 255, 255, 0.75);
+    /* Box Shadows */
+    --bg-reply-post-Tex-Shadow: 0 0 15px rgba(32, 32, 39, 0.63);
+    --extPanel-box-shadow: 0 0 70px rgba(62, 62, 62, 0.24);
+    --post-preview-box-shadow: 0 10px 20px rgb(10, 10, 10);
+    --bg-quick-reply-box-shadow: 0 0 40px 20px rgb(0, 0, 0, 0.6);
+    /* ################################## */
+
+    /* Enlaces ########################## */
     --a-color: #85a1cf;
     --a-color-PostInfoMobile-reply-post: rgb(23, 193, 255);
-    --settings-tip-color: rgb(134, 134, 134);
-    --bg-boardNav: rgb(30, 30, 34);
-    --bg-boardNav-a: rgb(197, 197, 197);
     --a-color-hover: rgb(126, 165, 248);
-    --a-text-shadow: 0 0 15px rgba(126, 165, 248);
-    --a-file-text-text-shadow: 0 0 10px rgba(255, 190, 160, 0.6);
+    --link-reply-post: #fdcbb7;
+    --link-reply-post-hover: rgb(255, 201, 183);
+    --img-a-color: rgb(255, 218, 209);
+    --img-a-color-hover: rgb(255, 153, 128);
+    --bg-boardNav-a: rgb(197, 197, 197);
+    --a-visited: rgb(255, 81, 75);
+    --a-visited-hover: rgb(39, 233, 255);
+    --link-reply-post-visited-hover: rgb(253, 255, 135);
+    /* ################################## */
+
+    /* Texto ############################ */
+    --text-no-important: rgba(77, 80, 90, 0.534);
+    --text: white;
+    --mod-text: rgb(236, 71, 236);
     --button-text: white;
     --name-anon-color: aquamarine;
     --board-title-color: rgb(93, 127, 219);
-    --text-no-important: rgba(77, 80, 90, 0.534);
-    --text: white;
-    --bg-thread: rgb(49, 49, 53);
-    --img-a-color: rgb(255, 218, 209);
-    --img-a-color-hover: rgb(255, 153, 128);
-    --bg-PostInfoMobile-reply-post: rgb(43, 43, 60);
     --green-text: rgb(75, 229, 87);
-    --post-preview-box-shadow: 0 10px 20px rgb(10, 10, 10);
-    --mod-text-shadow: 0 0 25px rgb(255, 59, 255);
-    --mod-text: rgb(236, 71, 236);
     --bg-text: rgb(43,43,42);
-    --bg-textarea: rgb(30,30,32);
+    --settings-tip-color: rgb(134, 134, 134);
+    /* Texts Shadows */
+    --link-reply-post-text-shadow: 0 0 10px rgba(255, 190, 160, 0.6);
+    --a-text-shadow: 0 0 15px rgba(126, 165, 248);
+    --a-file-text-text-shadow: 0 0 10px rgba(255, 190, 160, 0.6);
+    --mod-text-shadow: 0 0 25px rgb(255, 59, 255);
+    /* ################################## */
+
     /* Archivo */
     --table-border: 1.5px solid white;
     --table-list2-bg: rgb(26, 27, 28);
     --table-list2-bg-hover: rgb(47, 47, 50);
     --table-list1-bg-hover: rgb(17, 17, 19);
-
-    --bg-quick-reply: rgba(13, 13, 14, 0.65);
-    --bg-quick-reply-box-shadow:0 0 40px 20px rgb(0, 0, 0, 0.6);
-    --bg-texarea-quick-reply: rgba(255, 255, 255, 0.75);
 }
 
 /*botones*/
@@ -107,7 +120,7 @@ div .extPanel {
 
 a {
     padding:8px;
-    color: var(--a-color) !important;
+    color: var(--a-color);
     text-decoration-line: none !important;
     transition: color 0.4s, text-shadow 0.4s;
 }
@@ -117,6 +130,14 @@ a:hover {
     color: var(--a-color-hover) !important;
     text-shadow: var(--a-text-shadow);
     
+}
+
+a:visited {
+    color: var(--a-visited);
+}
+
+a:visited:hover {
+    color: var(--a-visited-hover) !important;
 }
 
 div.fileText a:hover {
@@ -131,8 +152,17 @@ div.fileText a:hover {
     text-decoration-line: none;
 }
 
+/* Enlaces de respuesta a otro post ############################################### */
 .quoteLink, .quotelink, .deadlink {
     color: var(--link-reply-post) !important;
+}
+
+.quoteLink:visited, .quotelink:visited, .deadlink:visited {
+    color: var(--a-visited) !important;
+}
+
+.quoteLink:visited:hover, .quotelink:visited:hover, .deadlink:visited:hover {
+    color: var(--link-reply-post-visited-hover) !important;
 }
 
 .quoteLink:hover, .quotelink:hover, .deadlink:hover {
@@ -140,6 +170,7 @@ div.fileText a:hover {
     text-shadow: var(--link-reply-post-text-shadow);
     cursor: pointer;
 }
+/* ############################################################################### */
 
 .extButton, img.pointer {
     padding: 6px;
@@ -171,7 +202,7 @@ div.fileText a:hover {
 div#boardNavDesktop a {
     padding-left: 6px;
     padding-right: 6px;
-    color: var(--bg-boardNav-a);
+    color: var(--bg-boardNav-a) !important;
 }
 
 div#boardNavDesktop a:hover {
@@ -685,9 +716,6 @@ div#ctrl-top.desktop hr {
     .backlink span:hover {
         color: var(--a-color-hover) !important;
     }
-    a:hover, .useremail .name:hover, .useremail .postertrip:hover, a.quoteLink:hover, a.quotelink:hover, a.deadlink:hover, .useremail :hover, .useremail:hover *{
-        color: var(--a-color-hover) !important;
-    }
     .burichan_new .backlink a, .yotsuba_b_new .backlink a{
         color: var(--a-color-hover) !important;
     }
@@ -842,7 +870,7 @@ span.navLinks.mobilebtn {
     margin: 5px 0;
 }
 
-/* Modo Archivo */
+/* Modo Archivo ###################################################################### */
 
 table#arc-list.flashListing {
     border: var(--table-border) !important;
@@ -887,15 +915,17 @@ td.postblock {
     color: var(--a-color-hover) !important;
     text-shadow: var(--a-text-shadow);
 }
+/* #################################################################################### */
 
-/* pagina de busqueda */
+/* pagina de busqueda ############### */
 hr.desktop {
     display: none;
 }
+/* ################################## */
 
 /* un pequeño problema es que la pagina no carga los estilos de los mensajes resaltados por primera vez :( */
 
-/* caja de respuesta rapida */
+/* caja de respuesta rapida ########################################################## */
 
 div#quickReply {
     background: var(--bg-quick-reply);
@@ -973,3 +1003,4 @@ img#qrClose:hover {
     transform: scale(1.1, 1.1);
     cursor: pointer;
 }
+/* ################################################################################### */
