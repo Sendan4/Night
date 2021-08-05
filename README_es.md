@@ -3,7 +3,7 @@
 # Cold-Night
 Tema Oscuro para la pagina 4chan
 
-Solo para 4chan vanila, aun no funciona en 4chan X.
+Solo para 4chan vanila, funciona parcialmente en 4chan X, aun no se recomienda su uso.
 
 <img src="capturas/Captura_de_muestra2.png" width="100%">
 
