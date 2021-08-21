@@ -5,6 +5,10 @@ Custom CSS for 4chan
 - PC and Movil -
 */
 
+/*
+Variantes: Borroso, Normal
+*/
+
 /* variables, para organizar esto!! */
 :root {
     /* Fondos ########################### */
@@ -216,8 +220,8 @@ div.fileText a:hover {
 .settings-expand.pointer {
     font-size: 15px;
 }
-/*navegacion*/
 
+/* Navegacion */
 div#boardNavDesktop a {
     padding-left: 6px;
     padding-right: 6px;
@@ -251,8 +255,7 @@ div#boardNavDesktop a:visited:hover {
     font-size: 12px;
 }
 
-/*la parte de abajo*/
-
+/* la parte de abajo */
 #boardNavDesktopFoot .boardList a {
     padding-left: 10px;
     padding-right: 10px;
@@ -327,7 +330,6 @@ div#boardNavDesktopFoot {
     margin: 10px 0 10px 0;
     background: var(--text-no-important);
 }
-
 
 span#navbotright {
     margin: 10px 0;
@@ -572,7 +574,6 @@ div.postContainer.opContainer {
 }
 
 /*submenu post*/
-
 .dd-menu ul {
     background-color: rgb(31, 31, 39);
     border: none;
@@ -589,7 +590,6 @@ div.postContainer.opContainer {
 }
 
 /*new post*/
-
 table.postForm > tbody > tr > td:first-child {
     color: white;
     background-color: #375eca;
@@ -648,7 +648,6 @@ div#ctrl-top.desktop hr {
 }
 
 /*movil*/
-
 @media only screen and ( max-width:600px ){
     #settingsMenu > div{
         left: 50%;
@@ -790,170 +789,8 @@ div#ctrl-top.desktop hr {
 
 /*
 Hilos en modo catalogo.
-El modo frame, no funciona, no lo uses. :(
+Se Movio a un archivo aparte
 */
-
-div#info {
-    margin: 5px 0;
-    color: var(--text-no-important);
-}
-
-.navLinks.mobilebtn span a {
-    color: var(--text);
-}
-
-.navLinks.navLinksBottom.mobilebtn {
-    margin: 10px 0;
-    color: var(--text-no-important);
-}
-
-.navLinks.navLinksBottom.mobilebtn span a {
-    color: var(--text);
-}
-
-/*Lo mismo que UIpanel y extPanel, solo que con nombre diferente*/
-.panel {
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: var(--extPanel-box-shadow);
-    background: var(--bg-extPanel);
-    color: var(--text);
-    border: none;
-    position: fixed;
-}
-#backdrop {
-    background: var(--bg-back-UIPanel);
-}
-
-/*boton del el panel*/
-#theme-save {
-    background: white;
-    padding: 8px 15px 8px 15px;
-    margin-top: 20px;
-    transition: transform 0.4s, background 0.4s;
-    background: var(--bg-button);
-    border-radius: 5px;
-    border: none;
-    color: var(--text);
-}
-#theme-save:hover {
-    transform: scale(1.06, 1.06);
-    cursor: pointer;
-    background: var(--bg-button-hover);
-}
-
-ul.clickset.desktop li kbd {
-    color: black;
-}
-
-/* Los Hilos */
-
-#threads div.thread {
-    transition: background 0.5s, transform 0.5s, padding 0.5s;
-    font-size: 12px;
-}
-
-#threads div.thread:hover {
-    background: var(--bg-thread);
-    transform: scale(1.09, 1.09);
-    /*border-radius: 10px;*/
-}
-
-div.thread img {
-    cursor: pointer;
-}
-div.thread a.postMenuBtn {
-    display: none;
-    position: relative;
-    font-size: 15px;
-}
-
-.meta {
-    padding-top: 3px;
-    padding-bottom: 5px;
-}
-
-.teaser:hover {
-    padding: 0px 6px 0px 6px;
-    height: max-content;
-}
-
-/* botones */
-
-.btn-wrap {
-    padding: 8px 15px 8px 15px;
-    margin-top: 20px;
-    transition: transform 0.4s, background 0.4s;
-    background: var(--bg-button);
-    color: var(--text-no-important);
-    border-radius: 5px !important;
-    border: unset !important;
-    background-image: unset !important;
-    background-color: unset !important;
-    position: inherit;
-}
-
-.button {
-    border-radius: 5px !important;
-    background: var(--bg-button);
-    border: unset !important;
-    padding: 8px 15px 8px 15px;
-    color: var(--button-text) !important;
-}
-
-#settings {
-    display: inherit;
-    margin: 5px 0;
-}
-
-span.navLinks.mobilebtn {
-    display: inherit;
-    margin: 5px 0;
-}
-
-#filters-ctrl {
-    display: inline-block;
-    margin: 5px 0;
-}
-#qf-ctrl {
-    display: inline-block;
-    margin: 5px 0;
-}
-
-/* tabla de filtros */
-#filters button#filters-add {
-    padding: 8px 10px 8px 10px;
-    margin-top: 20px;
-    transition: transform 0.4s, background 0.4s;
-    background: var(--bg-button);
-    border-radius: 5px;
-    color: white;
-    border: 0px;
-}
-#filters button#filters-add:hover {
-    transform: scale(1.06,1.06);
-    cursor: pointer;
-    background: var(--bg-button-hover);
-}
-
-#filters span.right {
-    padding: 8px 10px 8px 10px;
-    margin-top: 20px;
-    transition: transform 0.4s, background 0.4s;
-    background: var(--bg-button);
-    border-radius: 5px;
-    border: none;
-}
-#filters button#filters-save {
-    background: none;
-    border: none;
-    color: white;
-}
-#filters span.right:hover {
-    transform: scale(1.06,1.06);
-    cursor: pointer;
-    background: var(--bg-button-hover);
-}
 
 /* Modo Archivo ###################################################################### */
 

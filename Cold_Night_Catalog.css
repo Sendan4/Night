@@ -3,6 +3,242 @@ Pienso separar los estilos del catalogo de hilos y de los estilos generales
 ya que estos estan separados en la propia pagina
 */
 
+/* @import 'Cold_Night.css'; */
+/* No creo que eso vaya a funcionar aqui */
+
+:root {
+    /* Fondos ########################### */
+    --bg: rgb(6, 6, 6);
+    --bg-button: rgb(31, 31, 32);
+    --bg-button-hover: rgb(55, 55, 55);
+    --bg-extPanel: rgba(13, 13, 14, 0.8);
+    --bg-boardNav: rgb(30, 30, 34);
+    --bg-back-UIPanel: rgba(0, 0, 0, 0.8);
+    /* Box Shadows */
+    --extPanel-box-shadow: 0 0 30px rgba(25, 25, 25, 0.24);
+    /* ################################## */
+
+    /* Enlaces ########################## */
+    --a-color-hover: rgb(126, 165, 248);
+    --a-visited: rgb(255, 81, 75);
+    --a-visited-hover: rgb(39, 233, 255);
+    --bg-boardNav-a: rgb(197, 197, 197);
+    /* ################################## */
+
+    /* Texto ############################ */
+    --text-no-important: rgba(77, 80, 90, 0.534);
+    --button-text: white;
+    --text: white;
+    /* Text Shadow */
+    --a-text-shadow: 0 0 15px rgba(126, 165, 248);
+    /* ################################## */
+
+    /* Fluent ########################### */
+    --Borroso-Panel-blur:blur(7px);
+    --Borroso-Panel-botton:0.3px solid gray;
+    --Borroso-Panel-botton-active:1px solid white;
+    /* ################################## */
+}
+
+/* Fuente para el texto, y otras cosas */
+body {
+    text-rendering: optimizeLegibility;
+    background: var(--bg);
+    color: white;
+    font-family: 
+    /* Fira Code, Beautiful Font!! >:) */
+    Fira Code, 
+    -apple-system, 
+    Roboto, 
+    Ubuntu, 
+    Cantarell, 
+    Noto Sans,
+    'Open Sans', 
+    sans-serif; 
+}
+
+.panel {
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: var(--extPanel-box-shadow);
+    background: var(--bg-extPanel);
+    /* Para la variante Borroso o algo asi */
+    backdrop-filter: var(--Borroso-Panel-blur);
+    -moz-backdrop-filter: var(--Borroso-Panel-blur);
+    -webkit-backdrop-filter: var(--Borroso-Panel-blur);
+    /* ################################## */
+    filter:blur(inset);
+    color: var(--text);
+    border: none;
+    position: fixed;
+    top: 5% !important;
+}
+
+@media only screen and ( max-height:700px ), ( max-width:800px ) {
+    .panel {
+        overflow-y: scroll;
+        top: 0 !important;
+        height: 100%;
+        border-radius: 0 !important;
+    }
+    #theme {
+        width: 100% !important;
+        left: 0;
+        margin-left: 0 !important;
+    }
+    .icon.closeIcon {
+        right: 30px;
+        top: 10px;
+    }
+}
+
+/* Navegacion ############################################################## */
+div#boardNavDesktop a {
+    padding-left: 6px;
+    padding-right: 6px;
+    color: var(--bg-boardNav-a) !important;
+}
+
+div#boardNavDesktop a:hover {
+    color: var(--a-color-hover) !important;
+}
+
+div#boardNavDesktop a:visited {
+    color: var(--a-visited) !important;
+}
+
+div#boardNavDesktop a:visited:hover {
+    color: var(--a-visited-hover) !important;
+}
+
+#boardNavDesktop {
+    padding: 5px 5px 35px 5px;
+    margin: 0;
+    background: var(--bg-boardNav);
+}
+
+#navtopright {
+    padding: 10px 5px 10px 5px;
+    font-size: 15px !important;
+}
+
+.navtopright {
+    font-size: 12px;
+}
+
+/* la parte de abajo */
+#boardNavDesktopFoot .boardList a {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--bg-boardNav-a) !important;
+    transition: color 0.5s, text-shadow 0.5s;
+}
+
+#boardNavDesktopFoot .boardList a:hover {
+    color: var(--a-color-hover) !important;
+    text-shadow: var(-a-text-shadow);
+}
+
+#boardNavDesktopFoot .boardList a:visited {
+    color: var(--a-visited) !important;
+}
+
+#boardNavDesktopFoot .boardList a:visited:hover {
+    color: var(--a-visited-hover) !important;
+}
+
+div#boardNavDesktopFoot {
+    padding: 10px 10px 40px 10px;
+    background: var(--bg-boardNav);
+}
+
+.navLinks.navLinksBot.desktop {
+    margin: 15px 0 0 0;
+    color: var(--text-no-important);
+}
+
+.btn-wrap::before {
+    content: "";
+    /* Nada */
+}
+.btn-wrap::after {
+    content: "";
+    /* Nada */
+}
+
+.open-qr-wrap {
+    padding: 5px;
+    margin: 5px 15px;
+    width: 110px;
+    height: auto;
+    border-radius: 5px;
+    background: var(--bg-button);
+    color: var(--button-text);
+    transition: transform 0.5s;
+    position: inherit;
+}
+
+.open-qr-wrap:hover {
+    background: var(--bg-button-hover);
+    transform: scale(1.024,1.024);
+}
+
+.navLinks.desktop {
+    margin: 5px 0;
+    color: var(--text-no-important);
+}
+
+.navLinks.navLinksBot.desktop label input {
+    color: var(--button-text);
+}
+
+.bottomCtrl {
+    margin: 10px 0 20px 0;
+}
+
+.navbotright {
+    margin: 10px 0 10px 0;
+    background: var(--text-no-important);
+    color: var(--bg-boardNav-a) !important;
+}
+
+span#navbotright {
+    margin: 10px 0;
+    padding: 4px 10px 4px 10px;
+    background: rgb(30, 30, 34);
+    font-size: 15px !important;
+}
+
+.boardList {
+    color: var(--text-no-important);
+}
+
+.absBotDisclaimer {
+    color: #c5c5c5;
+}
+/* ######################################################################### */
+
+a {
+    padding:8px;
+    color: var(--a-color) !important;
+    text-decoration-line: none !important;
+    transition: color 0.4s, text-shadow 0.4s;
+}
+
+a:hover {
+    color: var(--a-color-hover) !important;
+    text-shadow: var(--a-text-shadow);
+    
+}
+
+a:visited {
+    color: var(--a-visited) !important;
+}
+
+a:visited:hover {
+    color: var(--a-visited-hover) !important;
+}
+
 /*
 Hilos en modo catalogo.
 El modo frame, no funciona, no lo uses. :(
@@ -44,17 +280,19 @@ div#info {
 #theme-save {
     background: white;
     padding: 8px 15px 8px 15px;
-    margin-top: 20px;
-    transition: transform 0.4s, background 0.4s;
+    margin: 20px 0;
+    transition: transform 0.4s, background 0.4s, border 0.5s;
     background: var(--bg-button);
     border-radius: 5px;
     border: none;
     color: var(--text);
+    border: var(--Borroso-Panel-botton);
 }
 #theme-save:hover {
     transform: scale(1.06, 1.06);
     cursor: pointer;
     background: var(--bg-button-hover);
+    border: var(--Borroso-Panel-botton-active);
 }
 
 ul.clickset.desktop li kbd {
@@ -133,4 +371,19 @@ span.navLinks.mobilebtn {
 #qf-ctrl {
     display: inline-block;
     margin: 5px 0;
+}
+
+/* Anchura pequeña o en el movil */
+@media only screen and ( max-width:480px ) {
+    div#boardNavMobile.mobile {
+        background-color: #2d2d33 !important;
+        background: #2d2d33 !important;
+        color: white !important;
+        border: none;
+        padding: 5px 0;
+    }
+
+    div#boardNavMobile.mobile strong {
+        color: var(--text);
+    }
 }
