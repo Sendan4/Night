@@ -1,4 +1,4 @@
-[in](README.md)
+[es](README_es.md)
 
 # Cold-Night
 Tema Oscuro para la pagina 4chan
