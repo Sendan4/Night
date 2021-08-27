@@ -65,7 +65,8 @@ Variantes: Borroso, Normal
     --name-anon-color: aquamarine;
     --board-title-color: rgb(93, 127, 219);
     --green-text: rgb(75, 229, 87);
-    --bg-green-text-selected: rgba(17, 199, 0, 0.288);
+    --bg-green-text-selected: rgb(21, 255, 0);
+    --green-text-selected: black;
     --bg-text: rgb(43,43,42);
     --settings-tip-color: rgb(134, 134, 134);
     /* Texts Shadows */
@@ -667,6 +668,8 @@ span.quote {
 
 span.quote::selection {
     background: var(--bg-green-text-selected);
+    color: var(--green-text-selected);
+    font-weight: bold !important;
 }
 
 /* a quitar esta linea */
