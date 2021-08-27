@@ -12,7 +12,6 @@ Variantes: Borroso, Normal
 /* variables, para organizar esto!! */
 :root {
     /* Fondos ########################### */
-    --bg: rgb(6, 6, 6);
     --bg-reply-post: rgb(58, 58, 73);
     --bg-button: rgb(31, 31, 32);
     --bg-button-hover: rgb(55, 55, 55);
@@ -30,6 +29,13 @@ Variantes: Borroso, Normal
     --extPanel-box-shadow: 0 0 30px rgba(25, 25, 25, 0.24);
     --post-preview-box-shadow: 0 10px 20px rgb(10, 10, 10);
     --bg-quick-reply-box-shadow: 0 0 40px 20px rgb(0, 0, 0, 0.6);
+    --yt-embed-box-shadow: 0 0 50px 10px rgb(0, 0, 0, 0.6) ;
+    /* Bg Animated*/
+    --bg-step1: rgb(6, 6, 6);
+    --bg-step2: rgb(8, 7, 7);
+    --bg-step3: rgb(8, 8, 7);
+    --bg-step4: rgb(7, 8, 7);
+    --bg-step5: rgb(6, 8, 10);
     /* ################################## */
 
     /* Enlaces ########################## */
@@ -59,6 +65,7 @@ Variantes: Borroso, Normal
     --name-anon-color: aquamarine;
     --board-title-color: rgb(93, 127, 219);
     --green-text: rgb(75, 229, 87);
+    --bg-green-text-selected: rgba(17, 199, 0, 0.288);
     --bg-text: rgb(43,43,42);
     --settings-tip-color: rgb(134, 134, 134);
     /* Texts Shadows */
@@ -83,8 +90,8 @@ Variantes: Borroso, Normal
     cursor: pointer;
     background: var(--bg-button-hover);
 }
-/*caja de configuraciones y mas*/
 
+/*caja de configuraciones y mas*/
 div .extPanel {
     padding: 15px;
     box-shadow: var(--extPanel-box-shadow);
@@ -283,7 +290,7 @@ div#boardNavDesktopFoot {
 
 .navLinks.navLinksBot.desktop {
     margin: 15px 0 0 0;
-    color: var(--text-no-important);
+    color: var(--text-invisible) !important;
 }
 
 .btn-wrap::before {
@@ -315,7 +322,7 @@ div#boardNavDesktopFoot {
 
 .navLinks.desktop {
     margin: 5px 0;
-    color: var(--text-no-important);
+    color: var(--text-invisible) !important;
 }
 
 .navLinks.navLinksBot.desktop label input {
@@ -351,8 +358,9 @@ span#navbotright {
 /* Fuente para el texto, y otras cosas */
 body {
     text-rendering: optimizeLegibility;
-    background: var(--bg);
     color: white;
+    /* Espero que pueda ser lo suficientemente suave para ti */
+    animation: bgAnimated 15s infinite;
     font-family: 
     /* Fira Code, Beautiful Font!! >:) */
     Fira Code, 
@@ -363,6 +371,14 @@ body {
     Noto Sans,
     'Open Sans', 
     sans-serif; 
+}
+
+@keyframes bgAnimated {
+    0% {background: var(--bg-step1);}
+    25% {background: var(--bg-step2);}
+    50% {background: var(--bg-step3);}
+    75% {background: var(--bg-step4);}
+    100% {background: var(--bg-step5);}
 }
 
 /* Desactivado por Defecto, Podria molestar en un movil, activalo descomentando todo lo que encierra a html --> /* */
@@ -619,7 +635,7 @@ table.postForm textarea {
     color: var(--text);
 }
 
-/*post op preview*/
+/* post op previews */
 .preview.reveal-spoilers {
     border: none !important;
     background: var(--bg-reply-post) !important;
@@ -637,9 +653,20 @@ table.postForm textarea {
     padding: 10px;
 }
 
+div#yt-preview.reply {
+    outline: none;
+    border: 0 !important;
+    background: none;
+    box-shadow: var(--yt-embed-box-shadow);
+}
+
 /* hmmm, el texto verde ...*/
 span.quote {
     color: var(--green-text) !important;
+}
+
+span.quote::selection {
+    background: var(--bg-green-text-selected);
 }
 
 /* a quitar esta linea */
@@ -648,6 +675,7 @@ div#ctrl-top.desktop hr {
 }
 
 /*movil*/
+
 @media only screen and ( max-width:600px ){
     #settingsMenu > div{
         left: 50%;
@@ -793,7 +821,6 @@ Se Movio a un archivo aparte
 */
 
 /* Modo Archivo ###################################################################### */
-
 table#arc-list.flashListing {
     border: var(--table-border) !important;
 }
@@ -856,7 +883,6 @@ hr.desktop {
 /* un pequeño problema es que la pagina no carga los estilos de los mensajes resaltados por primera vez :( */
 
 /* caja de respuesta rapida ########################################################## */
-
 div#quickReply {
     background: var(--bg-quick-reply);
     border: var(--table-border) !important;
