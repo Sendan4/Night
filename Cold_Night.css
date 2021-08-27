@@ -669,7 +669,6 @@ span.quote {
 span.quote::selection {
     background: var(--bg-green-text-selected);
     color: var(--green-text-selected);
-    font-weight: bold !important;
 }
 
 /* a quitar esta linea */
