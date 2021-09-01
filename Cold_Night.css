@@ -2,7 +2,6 @@
 Custom CSS for 4chan
 - Disfrutalo Anon -
 - Enjoy Anon -
-- PC and Movil -
 */
 
 /*
@@ -12,7 +11,7 @@ Variantes: Borroso, Normal
 /* variables, para organizar esto!! */
 :root {
     /* Fondos ########################### */
-    --bg-reply-post: rgb(58, 58, 73);
+    --bg-reply-post: rgb(50, 50, 62);
     --bg-button: rgb(31, 31, 32);
     --bg-button-hover: rgb(55, 55, 55);
     --bg-allpage-blur-no-hover: blur(7px);
@@ -22,14 +21,15 @@ Variantes: Borroso, Normal
     --bg-thread: rgb(49, 49, 53);
     --bg-PostInfoMobile-reply-post: rgb(43, 43, 60);
     --bg-textarea: rgb(30,30,32);
-    --bg-quick-reply: rgba(13, 13, 14, 0.65);
+    --bg-quick-reply: rgba(13, 13, 14, 0.88);
     --bg-texarea-quick-reply: rgba(255, 255, 255, 0.75);
     /* Box Shadows */
     --bg-reply-post-Box-Shadow: 0 0 15px rgba(0, 0, 0, 0.63);
     --extPanel-box-shadow: 0 0 30px rgba(25, 25, 25, 0.24);
     --post-preview-box-shadow: 0 10px 20px rgb(10, 10, 10);
     --bg-quick-reply-box-shadow: 0 0 40px 20px rgb(0, 0, 0, 0.6);
-    --yt-embed-box-shadow: 0 0 50px 10px rgb(0, 0, 0, 0.6) ;
+    --yt-embed-box-shadow: 0 0 50px 10px rgb(0, 0, 0, 0.6);
+    --reply-target-post: 0 0 15px rgba(87, 87, 105, 0.46);
     /* Bg Animated*/
     --bg-step1: rgb(6, 6, 6);
     --bg-step2: rgb(8, 7, 7);
@@ -45,15 +45,15 @@ Variantes: Borroso, Normal
     --link-reply-post: #fdcbb7;
     --link-reply-post-hover: rgb(255, 201, 183);
     --img-a-color: rgb(255, 218, 209);
-    --img-a-color-hover: rgb(255, 153, 128);
+    --img-a-color-hover: rgb(255, 201, 183);
     --bg-boardNav-a: rgb(197, 197, 197);
     --a-visited: rgb(255, 81, 75);
     --a-visited-hover: rgb(39, 233, 255);
     --link-reply-post-visited-hover: rgb(253, 255, 135);
-    --blancklink-color: rgb(117, 90, 255);
-    --blancklink-color-visited: rgb(233, 51, 142);
-    --blancklink-color-hover: rgb(183, 168, 255);
-    --blancklink-color-hover-visited: rgb(255, 179, 215); 
+    --blacklink-color: rgb(117, 90, 255);
+    --blacklink-color-visited: rgb(255, 81, 75);
+    --blacklink-color-hover: rgb(183, 168, 255);
+    --blacklink-color-hover-visited: rgb(255, 179, 215); 
     /* ################################## */
 
     /* Texto ############################ */
@@ -66,7 +66,10 @@ Variantes: Borroso, Normal
     --board-title-color: rgb(93, 127, 219);
     --green-text: rgb(75, 229, 87);
     --bg-green-text-selected: rgb(21, 255, 0);
+    --link-reply-selected: #fdcbb7;
+    --link-reply-selected-visited: rgb(255, 81, 75);
     --green-text-selected: black;
+    --link-reply-text-selected: black;
     --bg-text: rgb(43,43,42);
     --settings-tip-color: rgb(134, 134, 134);
     /* Texts Shadows */
@@ -74,8 +77,8 @@ Variantes: Borroso, Normal
     --a-text-shadow: 0 0 15px rgba(126, 165, 248);
     --a-file-text-text-shadow: 0 0 10px rgba(255, 190, 160, 0.6);
     --mod-text-shadow: 0 0 25px rgb(255, 59, 255);
-    --blancklink-color-text-shadow: 0 0 15px rgba(117, 90, 255, 0.5);
-    --blancklink-color-hover-visited-text-shadow:0 0 15px rgb(233, 51, 142, 0.6); 
+    --blacklink-color-text-shadow: 0 0 15px rgba(117, 90, 255, 0.5);
+    --blacklink-color-hover-visited-text-shadow:0 0 15px rgb(233, 51, 142, 0.6); 
     /* ################################## */
 
     /* Archivo */
@@ -85,7 +88,8 @@ Variantes: Borroso, Normal
     --table-list1-bg-hover: rgb(17, 17, 19);
 
     /* Borroso ########################## */
-    --Borroso-Panel-blur:blur(7px);
+    --Borroso-Panel-blur: blur(7px);
+    bg-quick-reply: blur(7px);
     /* ################################## */
 }
 
@@ -125,17 +129,18 @@ div .extPanel {
     background: var(--bg-back-UIPanel)
 }
 
-.extPanel.reply {
+#settingsMenu .extPanel {
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10px;
     margin: 0;
     position: fixed;
-    width: 80%;
+    width: 100%;
+    max-width: 700px;
 }
 
 @media only screen and ( max-height:700px ), ( max-width:800px ) {
-    .extPanel.reply {
+    #settingsMenu .extPanel {
         border-radius: unset !important;
         transform: unset;
         left: 0;
@@ -162,7 +167,7 @@ div .extPanel {
 }
 
 a {
-    padding:8px;
+    padding: 4px;
     color: var(--a-color) !important;
     text-decoration-line: none !important;
     transition: color 0.4s, text-shadow 0.4s;
@@ -188,23 +193,23 @@ div.fileText a:hover {
 
 .burichan_new .backlink a, .yotsuba_b_new .backlink a {
     text-decoration-line: none;
-    color: var(--blancklink-color) !important;
+    color: var(--blacklink-color) !important;
     letter-spacing: 1px;
     font-size: 11.4px;
     text-rendering: optimizeLegibility;
 }
 .burichan_new .backlink a:hover, .yotsuba_b_new .backlink a:hover {
-    color: var(--blancklink-color-hover) !important;
-    text-shadow: var(--blancklink-color-text-shadow);
+    color: var(--blacklink-color-hover) !important;
+    text-shadow: var(--blacklink-color-text-shadow);
     font-weight: 600;
 }
 .burichan_new .backlink a:visited, .yotsuba_b_new .backlink a:visited {
-    color: var(--blancklink-color-visited) !important;
+    color: var(--blacklink-color-visited) !important;
+    font-weight: 600;
 }
 .burichan_new .backlink a:visited:hover, .yotsuba_b_new .backlink a:visited:hover {
-    color: var(--blancklink-color-hover-visited) !important;
-    text-shadow: var(--blancklink-color-hover-visited-text-shadow);
-    font-weight: 600;
+    color: var(--blacklink-color-hover-visited) !important;
+    text-shadow: var(--blacklink-color-hover-visited-text-shadow);
 }
 
 /* Enlaces de respuesta a otro post ############################################### */
@@ -224,6 +229,16 @@ div.fileText a:hover {
     color: var(--link-reply-post) !important;
     text-shadow: var(--link-reply-post-text-shadow);
     cursor: pointer;
+}
+
+.quoteLink::selection, .quotelink::selection, .deadlink::selection {
+    background: var(--link-reply-selected);
+    color: var(--link-reply-text-selected) !important;
+}
+
+.quoteLink:visited::selection, .quotelink:visited::selection, .deadlink:visited::selection {
+    background: var(--link-reply-selected-visited);
+    color: var(--link-reply-text-selected) !important;
 }
 /* ############################################################################### */
 
@@ -348,6 +363,7 @@ div#boardNavDesktopFoot {
 .navLinks.desktop {
     margin: 5px 0;
     color: var(--text-invisible) !important;
+    height: 15px;
 }
 
 .navLinks.navLinksBot.desktop label input {
@@ -430,10 +446,6 @@ img.fileDeletedRes.retina {
     background: white;
 }
 
-span.postNum.desktop span a.replylink {
-    color: var(--a-color) !important;
-}
-
 .identityIcon {
     transform: scale(1.08, 1.08);
 }
@@ -471,13 +483,8 @@ div.post div.postInfo span.nameBlock span.name {
     color: var(--name-anon-color);
 }
 
-div.post div.postInfo span.postNum a:hover, .posteruid .hand {
-    color: #b9b9b9;
-    transition: background 0.4s;
-}
-
 div.post div.postInfo span.postNum a, .posteruid .hand {
-    color: #cdd9ff;
+    color: var(--a-color) !important;
 }
 
 div.post div.postInfo span.postNum a:hover, .posteruid .hand:hover {
@@ -543,16 +550,22 @@ div.postContainer.opContainer {
     div#quote-preview {
         position: fixed !important;
         display: inline-block !important;
-        left: 0 !important;
+        left: 0% !important;
         top: 0 !important;
-        width: 100%;
+        width: 98%;
         height: auto;
-        max-height: 45%;
+        max-height: 30%;
         font-size: 11.3px !important;
         z-index: 100;
         border-radius: 0;
         /* Deberia de resaltar un poco */
         box-shadow: var(--post-preview-box-shadow) !important;
+    }
+    div#quote-preview.highlight {
+        left: 2.5% !important;
+        width: 93%;
+        border-radius: 0;
+        margin: 0;
     }
 
     /* Omg las imagenes grandes */
@@ -601,8 +614,8 @@ div.postContainer.opContainer {
 .reply:target, .reply.highlight {
     border:none !important;
     background: var(--bg-reply-post) !important;
-    box-shadow: 0 0 15px rgba(87, 87, 105, 0.596) !important;
-    border-radius:5px;
+    box-shadow: var(--reply-target-post) !important;
+    border-radius: 5px;
     transform: scale(1.05,1.05);
 }
 
@@ -909,11 +922,12 @@ hr.desktop {
 /* caja de respuesta rapida ########################################################## */
 div#quickReply {
     background: var(--bg-quick-reply);
+    /* Borroso */
+    /* backdrop-filter: var(bg-quick-reply); */
     border: var(--table-border) !important;
     transition: background 0.5s, box-shadow 0.5s;
 }
 div#quickReply:hover {
-    background: var(--bg-quick-reply-no-transparent);
     box-shadow: var(--bg-quick-reply-box-shadow);
 }
 
