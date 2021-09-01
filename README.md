@@ -9,7 +9,7 @@ Only for 4chan vanila, works partially on 4chan X, not yet recommended.
 
 ## Como Agregar Este tema a 4chan?
 
-First get the file with the styles [**here**](https://gitlab.com/448L/night/-/releases)
+First get the file with the styles [**here**](https://github.com/448L/Night/releases)
 
 Access to [4chan](https://www.4chan.org/) and go to a board, at the top look for "settings".
 
