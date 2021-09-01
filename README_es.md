@@ -1,4 +1,4 @@
-[in](README.md)
+<b style = "font-size: 9px;">Languaje - [in](README.md)</b>
 
 # Cold-Night
 Tema Oscuro para la pagina 4chan
@@ -9,7 +9,7 @@ Solo para 4chan vanila, funciona parcialmente en 4chan X, aun no se recomienda s
 
 ## Como Agregar Este tema a 4chan?
 
-Primero Obtenga el archivo con los estilos [**aqui**](https://github.com/448L/Night/releases)
+Primero Obtenga el archivo con los estilos [**aqui**](https://gitlab.com/448L/night/-/releases)
 
 Acceda a [4chan](https://www.4chan.org/) y vaya a un tablon, arriba busque "settings".
 
@@ -26,3 +26,8 @@ Copie los Estilos o codigo del archivo "Cold_Night.css" en el cuadro, luego de c
 Por ultimo, dirijase hacia abajo, y de click sobre "Save Settings"
 
 <img src="capturas/4.png" width="500">
+
+Firefox
+<pre>
+layout.css.backdrop-filter.enabled
+</pre>

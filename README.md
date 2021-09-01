@@ -1,28 +1,28 @@
-[es](README_es.md)
+<b style = "font-size: 10px;">Languajes - [es](README_es.md)</b>
 
 # Cold-Night
-Tema Oscuro para la pagina 4chan
+Dark theme for 4chan site
 
-Solo para 4chan vanila, funciona parcialmente en 4chan X, aun no se recomienda su uso.
+Only for 4chan vanila, works partially on 4chan X, not yet recommended.
 
 <img src="capturas/Captura_de_muestra2.png" width="100%">
 
 ## Como Agregar Este tema a 4chan?
 
-Primero Obtenga el archivo con los estilos [**aqui**](https://github.com/448L/Night/releases)
+First get the file with the styles [**here**](https://gitlab.com/448L/night/-/releases)
 
-Acceda a [4chan](https://www.4chan.org/) y vaya a un tablon, arriba busque "settings".
+Access to [4chan](https://www.4chan.org/) and go to a board, at the top look for "settings".
 
 <img src="capturas/1.png" width="500">
 
-Navege hasta encontrar el apartado de "Miscellaneous", busque la opcion "Custom CSS" y marque la casilla, luego de click sobre "edit".
+Navigate to the "Miscellaneous" section, look for the "Custom CSS" option and check the box, then click on "edit".
 
 <img src="capturas/2.png" width="500">
 
-Copie los Estilos o codigo del archivo "Cold_Night.css" en el cuadro, luego de click sobre "Save CSS".
+Copy the Styles or code from the "Cold_Night.css" file into the box, then click on "Save CSS".
 
 <img src="capturas/3.png" width="500">
 
-Por ultimo, dirijase hacia abajo, y de click sobre "Save Settings"
+Finally, scroll down, and click on "Save Settings".
 
 <img src="capturas/4.png" width="500">
