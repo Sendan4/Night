@@ -63,10 +63,10 @@ body {
     padding: 15px;
     box-shadow: var(--extPanel-box-shadow);
     background: var(--bg-extPanel);
-    /* Para la variante Borroso o algo asi */
-    backdrop-filter: var(--Borroso-Panel-blur);
-    -moz-backdrop-filter: var(--Borroso-Panel-blur);
-    -webkit-backdrop-filter: var(--Borroso-Panel-blur);
+    /* Para la variante Borroso ######### */
+    /* backdrop-filter: var(--Borroso-Panel-blur); */
+    /* -moz-backdrop-filter: var(--Borroso-Panel-blur); */
+    /* -webkit-backdrop-filter: var(--Borroso-Panel-blur); */
     /* ################################## */
     filter:blur(inset);
     color: var(--text);

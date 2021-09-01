@@ -83,6 +83,10 @@ Variantes: Borroso, Normal
     --table-list2-bg: rgb(26, 27, 28);
     --table-list2-bg-hover: rgb(47, 47, 50);
     --table-list1-bg-hover: rgb(17, 17, 19);
+
+    /* Borroso ########################## */
+    --Borroso-Panel-blur:blur(7px);
+    /* ################################## */
 }
 
 /*botones*/
@@ -97,6 +101,8 @@ div .extPanel {
     padding: 15px;
     box-shadow: var(--extPanel-box-shadow);
     background: var(--bg-extPanel);
+    /* Borroso Variante */
+    /* backdrop-filter: var(--Borroso-Panel-blur);*/
     color: white;
     border: none;
 }
@@ -119,13 +125,31 @@ div .extPanel {
     background: var(--bg-back-UIPanel)
 }
 
-.UIPanel > div {
+.extPanel.reply {
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10px;
     margin: 0;
     position: fixed;
     width: 80%;
+}
+
+@media only screen and ( max-height:700px ), ( max-width:800px ) {
+    .extPanel.reply {
+        border-radius: unset !important;
+        transform: unset;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-height: none;
+        margin: none !important;
+        margin-top: none !important;
+        overflow-y: scroll;
+    }
+    #settingsMenu > div {
+        max-height: none;
+        top: 0;
+    }
 }
 
 #settingsMenu label input {
@@ -466,7 +490,7 @@ div.post div.postInfo span.postNum a:visited:hover, .posteruid .hand:visited:hov
 
 /*el Banner xd*/
 div.boardBanner {
-    margin: 40px 0 15px 0 !important;
+    margin: 20px 0 15px 0 !important;
 }
 
 .globalMessage.hideMobile {
@@ -683,14 +707,6 @@ div#ctrl-top.desktop hr {
 }
 
 /*movil*/
-
-@media only screen and ( max-width:600px ){
-    #settingsMenu > div{
-        left: 50%;
-        width: 100%;
-    }
-}
-
 @media only screen and ( max-width:480px ) {
     /* Aqui el mensaje de previa no estara absolutamente del todo arriba */
     div#quote-preview {
