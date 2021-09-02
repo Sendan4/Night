@@ -145,6 +145,7 @@ div .extPanel {
         transform: unset;
         left: 0;
         width: 100%;
+        max-width: none;
         height: 100%;
         max-height: none;
         margin: none !important;
@@ -302,6 +303,10 @@ div#boardNavDesktop a:visited:hover {
     font-size: 12px;
 }
 
+div.middlead.center {
+    margin: 0 0 6px 0;
+}
+
 /* la parte de abajo */
 #boardNavDesktopFoot .boardList a {
     padding-left: 10px;
@@ -342,6 +347,22 @@ div#boardNavDesktopFoot {
     /* Nada */
 }
 
+div.pagelist.desktop div.prev input[type = "submit"],
+div.pagelist.desktop form.pageSwitcherForm input[type = "submit"] {
+    background: var(--bg-button);
+    border-radius: none;
+    border: none;
+    color: var(--text);
+    transition: transform 0.5s;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+div.pagelist.desktop div.prev input[type = "submit"]:hover,
+div.pagelist.desktop form.pageSwitcherForm input[type = "submit"]:hover {
+    background: var(--bg-button-hover);
+    transform: scale(1.1,1.1);
+}
 
 .open-qr-wrap {
     padding: 5px;
@@ -371,7 +392,7 @@ div#boardNavDesktopFoot {
 }
 
 .bottomCtrl {
-    margin: 10px 0 20px 0;
+    margin: 0px 0 5px 0;
 }
 
 .navbotright {
@@ -514,6 +535,12 @@ div.pagelist div.pages a {
     padding-left: 12px;
     padding-right: 12px;
     transition: background 0.5s, color 0.5s;
+    color: var(--a-color);
+}
+
+div.pagelist div.pages { 
+    color: var(--text-invisible);
+    border: none;
 }
 
 div.pagelist div.pages a:hover {
