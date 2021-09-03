@@ -19,8 +19,6 @@ en las versiones que aun no salen, lo que se escriba aqui puede no ser definitiv
 
 - Sombras en los Textos.
 ### Cambios
-- El fondo estatico ahora es animado.
-
 - Se resalto un poco mas a los **moderadores**.
 
 - Se reduce un poco el relleno en el tablon de navegacion de tablones principal.
