@@ -31,11 +31,7 @@ Variantes: Borroso, Normal
     --yt-embed-box-shadow: 0 0 50px 10px rgb(0, 0, 0, 0.6);
     --reply-target-post: 0 0 15px rgba(87, 87, 105, 0.46);
     /* Bg Animated*/
-    --bg-step1: rgb(6, 6, 6);
-    --bg-step2: rgb(8, 7, 7);
-    --bg-step3: rgb(8, 8, 7);
-    --bg-step4: rgb(7, 8, 7);
-    --bg-step5: rgb(6, 8, 10);
+    --bg: rgb(8, 8, 8);
     /* ################################## */
 
     /* Enlaces ########################## */
@@ -89,7 +85,7 @@ Variantes: Borroso, Normal
 
     /* Borroso ########################## */
     --Borroso-Panel-blur: blur(7px);
-    bg-quick-reply: blur(7px);
+    --bg-quick-reply: blur(7px);
     /* ################################## */
 }
 
@@ -348,7 +344,8 @@ div#boardNavDesktopFoot {
 }
 
 div.pagelist.desktop div.prev input[type = "submit"],
-div.pagelist.desktop form.pageSwitcherForm input[type = "submit"] {
+div.pagelist.desktop form.pageSwitcherForm input[type = "submit"],
+div.prev {
     background: var(--bg-button);
     border-radius: none;
     border: none;
@@ -362,6 +359,18 @@ div.pagelist.desktop div.prev input[type = "submit"]:hover,
 div.pagelist.desktop form.pageSwitcherForm input[type = "submit"]:hover {
     background: var(--bg-button-hover);
     transform: scale(1.1,1.1);
+}
+
+div.prev {
+    color: var(--text-invisible);
+}
+
+div.prev:hover {
+    background: var(--bg-button-hover);
+}
+
+div.prev a {
+    color: var(--a-color);
 }
 
 .open-qr-wrap {
@@ -422,7 +431,7 @@ body {
     text-rendering: optimizeLegibility;
     color: white;
     /* Espero que pueda ser lo suficientemente suave para ti */
-    animation: bgAnimated 15s infinite;
+    background: var(--bg);
     font-family: 
     /* Fira Code, Beautiful Font!! >:) */
     Fira Code, 
@@ -433,14 +442,6 @@ body {
     Noto Sans,
     'Open Sans', 
     sans-serif; 
-}
-
-@keyframes bgAnimated {
-    0% {background: var(--bg-step1);}
-    25% {background: var(--bg-step2);}
-    50% {background: var(--bg-step3);}
-    75% {background: var(--bg-step4);}
-    100% {background: var(--bg-step5);}
 }
 
 /* Desactivado por Defecto, Podria molestar en un movil, activalo descomentando todo lo que encierra a html --> /* */
@@ -746,6 +747,14 @@ div#ctrl-top.desktop hr {
     display: none;
 }
 
+div#ctrl-top {
+    color: var(--text-invisible);
+}
+
+div#ctrl-top a{
+    color: var(--a-color);
+}
+
 /*movil*/
 @media only screen and ( max-width:480px ) {
     /* Aqui el mensaje de previa no estara absolutamente del todo arriba */
@@ -876,6 +885,10 @@ div#ctrl-top.desktop hr {
     }
     div.postInfoM.mobile a {
         color: var(--a-color-PostInfoMobile-reply-post);
+    }
+
+    div.boardBanner {
+        margin: 50px 0 15px 0 !important;
     }
 }
 
