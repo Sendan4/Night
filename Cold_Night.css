@@ -70,7 +70,7 @@ Variantes: Borroso, Normal
     --settings-tip-color: rgb(134, 134, 134);
     /* Texts Shadows */
     --link-reply-post-text-shadow: 0 0 10px rgba(255, 190, 160, 0.6);
-    --a-text-shadow: 0 0 15px rgba(126, 165, 248);
+    --a-text-shadow: 0 0 15px rgba(126, 165, 248, 0.753);
     --a-file-text-text-shadow: 0 0 10px rgba(255, 190, 160, 0.6);
     --mod-text-shadow: 0 0 25px rgb(255, 59, 255);
     --blacklink-color-text-shadow: 0 0 15px rgba(117, 90, 255, 0.5);
@@ -330,7 +330,7 @@ div#boardNavDesktopFoot {
 }
 
 .navLinks.navLinksBot.desktop {
-    margin: 15px 0 0 0;
+    margin: 7px 0 0 0;
     color: var(--text-invisible) !important;
 }
 
@@ -373,21 +373,14 @@ div.prev a {
     color: var(--a-color);
 }
 
-.open-qr-wrap {
-    padding: 5px;
-    margin: 5px 15px;
-    width: 110px;
-    height: auto;
-    border-radius: 5px;
-    background: var(--bg-button);
-    color: var(--button-text);
-    transition: transform 0.5s;
+div.open-qr-wrap a {
     position: inherit;
 }
 
-.open-qr-wrap:hover {
-    background: var(--bg-button-hover);
-    transform: scale(1.024,1.024);
+.open-qr-wrap {
+    left: 0 !important;
+    position: inherit;
+    margin: 0;
 }
 
 .navLinks.desktop {
@@ -396,12 +389,13 @@ div.prev a {
     height: 15px;
 }
 
-.navLinks.navLinksBot.desktop label input {
-    color: var(--button-text);
+.bottomCtrl {
+    margin: 0 0 10px 80%;
+    width: max-content;
 }
 
-.bottomCtrl {
-    margin: 0px 0 5px 0;
+.navLinks.navLinksBot.desktop label input {
+    color: var(--button-text);
 }
 
 .navbotright {
@@ -624,6 +618,16 @@ div.postContainer.opContainer {
         height: auto !important;
         max-width: 30% !important;
         margin-left: 30%;
+    }
+
+    .bottomCtrl {
+        margin: 30px 0 5px 0;
+    }
+
+    .open-qr-wrap {
+        left: none;
+        margin: 7px auto;
+        position: initial;
     }
 }
 

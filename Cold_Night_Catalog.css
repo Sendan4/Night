@@ -11,14 +11,16 @@ ya que estos estan separados en la propia pagina
     --bg: rgb(6, 6, 6);
     --bg-button: rgb(31, 31, 32);
     --bg-button-hover: rgb(55, 55, 55);
-    --bg-extPanel: rgba(13, 13, 14, 0.8);
-    --bg-boardNav: rgb(30, 30, 34);
+    --bg-extPanel: rgba(13, 13, 14, 0.98);
+    --bg-boardNav: rgba(13, 13, 14, 0.98);
     --bg-back-UIPanel: rgba(0, 0, 0, 0.8);
+    --bg-thread-catalog: rgb(30, 30, 32);
     /* Box Shadows */
     --extPanel-box-shadow: 0 0 30px rgba(25, 25, 25, 0.24);
     /* ################################## */
 
     /* Enlaces ########################## */
+    --a-color: #85a1cf;
     --a-color-hover: rgb(126, 165, 248);
     --a-visited: rgb(255, 81, 75);
     --a-visited-hover: rgb(39, 233, 255);
@@ -29,6 +31,7 @@ ya que estos estan separados en la propia pagina
     --text-no-important: rgba(77, 80, 90, 0.534);
     --button-text: white;
     --text: white;
+    --board-title-color: rgb(93, 127, 219);
     /* Text Shadow */
     --a-text-shadow: 0 0 15px rgba(126, 165, 248);
     /* ################################## */
@@ -126,6 +129,10 @@ div#boardNavDesktop a:visited:hover {
 
 .navtopright {
     font-size: 12px;
+}
+
+.boardTitle {
+    color: var(--board-title-color) !important;
 }
 
 /* la parte de abajo */
@@ -304,14 +311,15 @@ ul.clickset.desktop li kbd {
 /* Los Hilos */
 
 #threads div.thread {
-    transition: background 0.5s, transform 0.5s, padding 0.5s;
+    transition: background 0.5s, transform 0.5s, padding 0.5s, border 1s;
     font-size: 12px;
 }
 
 #threads div.thread:hover {
-    background: var(--bg-thread);
+    background: var(--bg-thread-catalog);
     transform: scale(1.09, 1.09);
-    /*border-radius: 10px;*/
+    border-radius: 7px;
+    border: 0.5px solid rgb(122, 122, 122);
 }
 
 div.thread img {
@@ -388,4 +396,8 @@ span.navLinks.mobilebtn {
     div#boardNavMobile.mobile strong {
         color: var(--text);
     }
+}
+
+div#footer-links {
+    color: var(--a-color);
 }
