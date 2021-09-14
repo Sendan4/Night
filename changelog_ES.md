@@ -18,6 +18,8 @@ en las versiones que aun no salen, lo que se escriba aqui puede no ser definitiv
 - Colores mas brillantes o fuertes para enlaces ya visitados.
 
 - Sombras en los Textos.
+
+- Estilo para los mensajes Globales ?
 ### Cambios
 - Se resalto un poco mas a los **moderadores**.
 

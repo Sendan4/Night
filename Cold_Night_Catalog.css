@@ -32,15 +32,23 @@ ya que estos estan separados en la propia pagina
     --button-text: white;
     --text: white;
     --board-title-color: rgb(93, 127, 219);
+    --GlobalToggle-text:white;
+    --GlobalMessage-text: rgb(250, 134, 134);
     /* Text Shadow */
     --a-text-shadow: 0 0 15px rgba(126, 165, 248);
     /* ################################## */
 
-    /* Fluent ########################### */
+    /* Bordes ############################ */
+    --border-GlobalToggle:0.5px solid rgb(250, 171, 171);
+    --NoVisible-border-GlobalToggle:0.5px solid rgba(0,0,0,0);
+    /* ################################### */
+
+    /* Borroso ########################### */
     --Borroso-Panel-blur:blur(7px);
     --Borroso-Panel-botton:0.3px solid gray;
     --Borroso-Panel-botton-active:1px solid white;
-    /* ################################## */
+    --Borroso-bg-back-UIPanel: rgba(13, 13, 14, 0.68);
+    /* ################################### */
 }
 
 /* Fuente para el texto, y otras cosas */
@@ -65,15 +73,17 @@ body {
     border-radius: 10px;
     padding: 15px;
     box-shadow: var(--extPanel-box-shadow);
-    background: var(--bg-extPanel);
+    /* background: var(--bg-extPanel);*/
     /* Para la variante Borroso ######### */
-    /* backdrop-filter: var(--Borroso-Panel-blur); */
+    backdrop-filter: var(--Borroso-Panel-blur);
     /* -moz-backdrop-filter: var(--Borroso-Panel-blur); */
     /* -webkit-backdrop-filter: var(--Borroso-Panel-blur); */
+    background: var(--Borroso-bg-back-UIPanel) !important;
+    border: var(--Borroso-Panel-botton) !important;
     /* ################################## */
     filter:blur(inset);
     color: var(--text);
-    border: none;
+    /*border: none;*/
     position: fixed;
     top: 5% !important;
 }
@@ -200,6 +210,29 @@ div#boardNavDesktopFoot {
 .navLinks.navLinksBot.desktop label input {
     color: var(--button-text);
 }
+
+/* Mensaje Global de "no se quien" ################################################### */
+
+#globalToggle {
+    background-image: none;
+    border: var(--border-GlobalToggle) !important;
+    background: var(--bg-button);
+    text-shadow: none;
+    color: var(--GlobalToggle-text) !important;
+    transition: color 0.6s ease-out, background 0.6s ease-out, border 0.4s;
+}
+
+#globalToggle:hover {
+    color: var(--GlobalToggle-text) !important;
+    background: rgb(255, 124, 124);
+    border: var(--NoVisible-border-GlobalToggle) !important;
+}
+
+#globalMessage {
+    color: var(--GlobalMessage-text);
+}
+
+/* ################################################################################### */
 
 .bottomCtrl {
     margin: 10px 0 20px 0;
