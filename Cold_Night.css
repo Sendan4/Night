@@ -668,8 +668,8 @@ div.postContainer.opContainer {
     }
 }
 /* No enseñare nada a esa a altura tan pequeña*/
-@media only screen and ( max-height: 500px ) {
-    div#quote-preview {display: none !important;}
+@media only screen and ( max-height: 300px ) {
+    div#quote-preview {display: none;}
 }
 
 @media only screen and ( max-width: 680px ) {
