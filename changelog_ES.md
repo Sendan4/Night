@@ -3,7 +3,7 @@ Aqui pondre por adelantado los cambios, correciones, y nuevas adiciones por adel
 
 en las versiones que aun no salen, lo que se escriba aqui puede no ser definitivo, puede cambiar al ser liberada la version
 
-## 1.5 *aun no sale*
+## 1.5 *Liberada*
 ### Nuevos
 - Nueva posicion para los Mensajes resaltados cuando la anchura es pequeña ,el texto los videos o imagenes seran pequeñas (despues de todo es una previa), tambien aplica para el movil.
 

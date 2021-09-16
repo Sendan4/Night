@@ -231,7 +231,6 @@ div#boardNavDesktopFoot {
 #globalMessage {
     color: var(--GlobalMessage-text);
 }
-
 /* ################################################################################### */
 
 .bottomCtrl {
@@ -409,10 +408,16 @@ span.navLinks.mobilebtn {
 #filters-ctrl {
     display: inline-block;
     margin: 5px 0;
+    padding-right: 30px;
 }
 #qf-ctrl {
     display: inline-block;
     margin: 5px 0;
+}
+
+.icon.helpIcon {
+    top: 10px;
+    right: 60px;
 }
 
 /* Anchura pequeña o en el movil */
