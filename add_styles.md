@@ -1,6 +1,6 @@
 ## How to add this theme to 4chan?
 
-First get the file with the styles [**here**](https://gitlab.com/448L/night/-/releases)
+First get the file with the styles [**here**](https://github.com/448L/Night/releases)
 
 Login to [4chan](https://www.4chan.org/) and go to a board, at the top look for "settings".
 
