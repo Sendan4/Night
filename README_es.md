@@ -1,33 +1,36 @@
+<img src = "capturas/4VC1.png" width = "50%" height = "auto">
+<img src = "capturas/4VC3.png" width = "45%" height = "auto">
+<img src = "capturas/4VC2.png">
+<img src = "capturas/4VC4.png">
+
 <b style = "font-size: 9px;">Languaje - [in](README.md)</b>
 
 # Cold-Night
 Tema Oscuro para la pagina 4chan
 
-Solo para 4chan vanila, funciona parcialmente en 4chan X, aun no se recomienda su uso.
+### Compatibilidad
 
-<img src="capturas/Captura_de_muestra2.png" width="100%">
+- [x] 4Chan Vanilla
+- [ ] 4Chan X
+### Un poco mas sobre esto
 
-## Como Agregar Este tema a 4chan?
+Hago este tema para praticar y de paso seguir aprendiendo CSS.
 
-Primero Obtenga el archivo con los estilos [**aqui**](https://gitlab.com/448L/night/-/releases)
+Quiero darle estilos modernos, con colores fuertes pero sin ser molesto para la vista, y a la vez conservando el estilo o esencia de la pagina.
 
-Acceda a [4chan](https://www.4chan.org/) y vaya a un tablon, arriba busque "settings".
+ª y el tema oscuro para la vista.
 
-<img src="capturas/1.png" width="500">
+### Como agregar estos estilos feos a 4chan?
 
-Navege hasta encontrar el apartado de "Miscellaneous", busque la opcion "Custom CSS" y marque la casilla, luego de click sobre "edit".
+<a href = "add_styles_es.md">Aqui</a>
+### Otra cosa
 
-<img src="capturas/2.png" width="500">
+Asegurate de tener eso activado en **Firefox**, en <a href = "about:config">about:config</a> si quieres usar la variante Borroso
 
-Copie los Estilos o codigo del archivo "Cold_Night.css" en el cuadro, luego de click sobre "Save CSS".
+asi es, introduce esto en Firefox <a href = "about:config">about:config</a>
 
-<img src="capturas/3.png" width="500">
-
-Por ultimo, dirijase hacia abajo, y de click sobre "Save Settings"
-
-<img src="capturas/4.png" width="500">
-
-Firefox
 <pre>
 layout.css.backdrop-filter.enabled
 </pre>
+
+<img src = "capturas/Firefox_about_config.png">

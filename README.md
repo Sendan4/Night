@@ -1,28 +1,38 @@
-<b style = "font-size: 10px;">Languajes - [es](README_es.md)</b>
+<img src = "capturas/4VC1.png" width = "50%" height = "auto">
+<img src = "capturas/4VC3.png" width = "45%" height = "auto">
+<img src = "capturas/4VC2.png">
+<img src = "capturas/4VC4.png">
+
+<b style = "font-size: 9px;">Languaje - [es](README_es.md)</b>
 
 # Cold-Night
-Dark theme for 4chan site
+Dark Theme for the 4chan site
 
-Only for 4chan vanila, works partially on 4chan X, not yet recommended.
+### Compatibility
 
-<img src="capturas/Captura_de_muestra2.png" width="100%">
+- [x] 4Chan Vanilla
+- [ ] 4Chan X
+### A little more about this
 
-## Como Agregar Este tema a 4chan?
+I'm making this theme to practice and to keep learning CSS.
 
-First get the file with the styles [**here**](https://github.com/448L/Night/releases)
+I want to give it modern styles, with strong colors but without being annoying to the eye, and at the same time preserving the style or essence of the page.
 
-Access to [4chan](https://www.4chan.org/) and go to a board, at the top look for "settings".
+ª and the dark theme for the view.
 
-<img src="capturas/1.png" width="500">
+### How to add these ugly styles to 4chan?
 
-Navigate to the "Miscellaneous" section, look for the "Custom CSS" option and check the box, then click on "edit".
+<a href = "add_styles.md">Here</a>
+### Another thing
 
-<img src="capturas/2.png" width="500">
+Make sure you have that enabled in **Firefox**, in <a href = "about:config">about:config</a> if you want to use the Blurred variant.
 
-Copy the Styles or code from the "Cold_Night.css" file into the box, then click on "Save CSS".
+that's right, enter this in Firefox <a href = "about:config">about:config</a>
 
-<img src="capturas/3.png" width="500">
+<pre>
+layout.css.backdrop-filter.enabled
+</pre>
 
-Finally, scroll down, and click on "Save Settings".
+<img src = "capturas/Firefox_about_config.png">
 
-<img src="capturas/4.png" width="500">
+Translated with www.DeepL.com/Translator (free version)
