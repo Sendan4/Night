@@ -11,7 +11,7 @@ Dark Theme for the 4chan site
 ### Compatibility
 
 - [x] 4Chan Vanilla
-- [ ] 4Chan X
+- [ ] Lainchan
 ### A little more about this
 
 I'm making this theme to practice and to keep learning CSS.
