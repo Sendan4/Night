@@ -1,0 +1,70 @@
+:root {
+	--bg: rgb(8, 8, 8);
+	--bg-reply-post: rgb(51, 51, 51);
+	/* Texto ####################################*/
+	--text: white;
+	--text2: rgb(209, 209, 209);
+	--green-text-selected: black;
+	--name-anon-color: aquamarine;
+	--green-text: rgb(75, 229, 87);
+
+	/* Bloque de codigo - Tema Monokai ##########*/
+	--codeblock-monokai-bg: rgb(15.3, 15.7, 13.3);
+	--codeblock-monokai-keyword: rgb(102, 217, 239);
+	--codeblock-monokai-meta-keyword: rgb(249,38,114);
+	--codeblock-monokai-built_in: rgb(166, 226, 46);
+	--codeblock-monokai-number: rgb(174, 129, 255);
+	--codeblock-monokai-meta-string: rgb(229, 181, 103);
+}
+
+body { background: var(--bg); }
+
+/* Posts */
+div.post.reply { 
+	background: var(--bg-reply-post);
+	color: var(--text);
+	border: none;
+}
+
+div.post.reply .body,  div.post.op div.body { color:var(--text2); }
+
+.intro span.name, .intro span.subject { color: var(--name-anon-color); font-weight: bold; }
+
+header { margin: 1.5em 0; }
+
+.board_image { margin: 80px auto 0 auto !important; }
+
+/* Parte Superior Menu de navegacion */
+div.boardlist { word-spacing: 5px; padding: 5px; }
+
+/* Bloque de codigo 
+Monokaiiii !!!
+*/
+pre code.hljs {
+	background: var(--codeblock-monokai-bg);
+	font-family:
+	'fira code',
+	'jetbrains mono',
+	'cascadia mono';
+	font-variant-ligatures: normal;
+	color: var(--text);
+	font-size: 13px;
+}
+
+.hljs-deletion, .hljs-formula, .hljs-keyword, .hljs-link, .hljs-selector-tag { color: var(--codeblock-monokai-meta-keyword); }
+
+.hljs-built_in, .hljs-emphasis, .hljs-name, .hljs-quote, .hljs-strong, .hljs-title, .hljs-variable { color: var(--codeblock-monokai-built_in); }
+
+.hljs-link_label, .hljs-literal, .hljs-number { color: var(--codeblock-monokai-number); }
+
+.hljs-attribute, .hljs-bullet, .hljs-class, .hljs-function, .hljs-function .hljs-keyword, .hljs-meta-keyword, .hljs-selector-pseudo, .hljs-tag 
+{ color: var(--codeblock-monokai-meta-keyword); }
+
+.hljs-addition, .hljs-meta-string, .hljs-section, .hljs-selector-attr, .hljs-selector-class, .hljs-string, .hljs-symbol
+{ color: var(--codeblock-monokai-meta-string); }
+
+.hljs-params .hljs-keyword { color: var(--codeblock-monokai-keyword); }
+
+/* Texto */
+span.quote::selection { background: var(--green-text); color: var(--green-text-selected); }
+span.quote { color: var(--green-text); }

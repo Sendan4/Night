@@ -11,7 +11,7 @@ Variantes: Borroso, Normal
 /* variables, para organizar esto!! */
 :root {
     /* Fondos ########################### */
-    --bg-reply-post: rgb(50, 50, 62);
+    --bg-reply-post: rgb(51, 51, 51);
     --bg-button: rgb(31, 31, 32);
     --bg-button-hover: rgb(55, 55, 55);
     --bg-allpage-blur-no-hover: blur(7px);
@@ -55,7 +55,7 @@ Variantes: Borroso, Normal
 
     /* Texto ############################ */
     --text-no-important: rgba(77, 80, 90, 0.534);
-    --text: white;
+    --text: rgb(209, 209, 209);
     --text-invisible: rgba(0, 0, 0, 0);
     --mod-text: rgb(236, 71, 236);
     --button-text: white;
@@ -460,7 +460,7 @@ span#navbotright {
 /* Fuente para el texto, y otras cosas */
 body {
     text-rendering: optimizeLegibility;
-    color: white;
+    color: var(--text);
     /* Espero que pueda ser lo suficientemente suave para ti */
     background: var(--bg);
     font-family: 
@@ -582,7 +582,7 @@ div.pagelist div.pages a:hover {
 
 /*post*/
 .post.reply {
-    background: rgb(20, 20, 24);
+    background: var(--bg-reply-post);
     border: none;
     padding: 5px;
     transition: border-radius 0.5s, transform 0.5s, box-shadow 0.5s, max-width 0.4s;
